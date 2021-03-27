@@ -14,14 +14,20 @@ type
   private
     FaudioOn: boolean;
     FaudioActif: boolean;
+    FaudioEnBoucle: boolean;
     procedure SetaudioActif(const Value: boolean);
     procedure SetaudioOn(const Value: boolean);
+    procedure SetaudioEnBoucle(const Value: boolean);
     { Déclarations privées }
     property audioActif: boolean read FaudioActif write SetaudioActif;
     property audioOn: boolean read FaudioOn write SetaudioOn;
+    property audioEnBoucle: boolean read FaudioEnBoucle write SetaudioEnBoucle;
   public
     { Déclarations publiques }
-    procedure Play(Filename: string = '');
+    procedure Load(Filename: string);
+    procedure Play(Filename: string; LectureEnBoucle: boolean = true); overload;
+    procedure Play(LectureEnBoucle: boolean = true); overload;
+    procedure PlaySound;
     procedure Stop;
     function IsPlaying: boolean;
     function IsActive: boolean;
@@ -45,11 +51,16 @@ begin
     if (audio.State = TMediaState.Stopped) then
     begin
       audio.CurrentTime := 0;
-      audio.Play;
+      if audioEnBoucle then
+        audio.Play;
     end
     else if (audio.State = TMediaState.Playing) and
       (audio.CurrentTime >= audio.Duration) then
+    begin
       audio.CurrentTime := 0;
+      if not audioEnBoucle then
+        Stop;
+    end;
   end;
 end;
 
@@ -66,25 +77,53 @@ begin
   result := FaudioActif;
 end;
 
+procedure TMusicLoop.Load(Filename: string);
+begin
+  if (not Filename.IsEmpty) and (tfile.Exists(Filename)) then
+    try
+      audio.Filename := Filename;
+      audioActif := true;
+      audioOn := false;
+    except
+      audioActif := false;
+    end;
+end;
+
+procedure TMusicLoop.Play(LectureEnBoucle: boolean);
+begin
+  Play('', LectureEnBoucle);
+end;
+
+procedure TMusicLoop.PlaySound;
+begin
+  Play('', false);
+end;
+
 function TMusicLoop.IsPlaying: boolean;
 begin
   result := FaudioActif and FaudioOn;
 end;
 
-procedure TMusicLoop.Play(Filename: string);
+procedure TMusicLoop.Play(Filename: string; LectureEnBoucle: boolean);
 begin
-  if (not Filename.IsEmpty) and (tfile.Exists(Filename)) then
+  if not Filename.IsEmpty then
+    Load(Filename);
+  if audioActif then
   begin
-    audio.Filename := Filename;
-    audioActif := true;
+    audioEnBoucle := LectureEnBoucle;
+    audioOn := true;
   end;
-  audioOn := true;
 end;
 
 procedure TMusicLoop.SetaudioActif(const Value: boolean);
 begin
   FaudioActif := Value;
   audioCheck.Enabled := Value;
+end;
+
+procedure TMusicLoop.SetaudioEnBoucle(const Value: boolean);
+begin
+  FaudioEnBoucle := Value;
 end;
 
 procedure TMusicLoop.SetaudioOn(const Value: boolean);
