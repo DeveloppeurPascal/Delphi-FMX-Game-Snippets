@@ -25,6 +25,8 @@ Les projets de ce dépôt sont :
 
 * EffetsSonores
 
+* AnimationVagues
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero :

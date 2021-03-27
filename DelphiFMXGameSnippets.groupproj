@@ -18,6 +18,9 @@
         <Projects Include="EffetsSonores\EffetsSonores.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnimationVagues\AnimationVagues.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +74,23 @@
     <Target Name="EffetsSonores:Make">
         <MSBuild Projects="EffetsSonores\EffetsSonores.dproj" Targets="Make"/>
     </Target>
+    <Target Name="AnimationVagues">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj"/>
+    </Target>
+    <Target Name="AnimationVagues:Clean">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationVagues:Make">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
