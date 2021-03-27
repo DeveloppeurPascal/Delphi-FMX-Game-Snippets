@@ -1,0 +1,39 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Animation de plusieurs canards'
+  ClientHeight = 553
+  ClientWidth = 562
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object zoneBas: TLayout
+    Align = Bottom
+    Position.Y = 403.000000000000000000
+    Size.Width = 562.000000000000000000
+    Size.Height = 150.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object zoneHaut: TLayout
+    Align = Bottom
+    Position.Y = 253.000000000000000000
+    Size.Width = 562.000000000000000000
+    Size.Height = 150.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object btnAjoutCanard: TButton
+    Position.X = 192.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Ajoute un canard'
+    OnClick = btnAjoutCanardClick
+  end
+end
