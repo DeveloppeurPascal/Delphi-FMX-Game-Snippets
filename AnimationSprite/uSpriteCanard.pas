@@ -9,6 +9,8 @@ uses
   FMX.Ani, FMX.Objects, FMX.Layouts, System.Generics.Collections;
 
 type
+  tonGetDecalageHauteurCanard = function(x, y: single): integer of object;
+
   TSpriteCanard = class(TFrame)
     Cible: TLayout;
     Baton: TRectangle;
@@ -18,12 +20,19 @@ type
     Canard_VersLaGauche: TRectangle;
     procedure DeLaDroiteVersLaGaucheFinish(Sender: TObject);
     procedure DeLaGaucheVersLaDroiteFinish(Sender: TObject);
+    procedure ActionPendantLeDeplacement(Sender: TObject);
   private
+    FonGetDecalageHauteurCanard: tonGetDecalageHauteurCanard;
+    PosY, DecalageY: single;
     function getZoneDAffichageHeight: single;
     function getZoneDAffichageWidth: single;
+    procedure SetonGetDecalageHauteurCanard(const Value
+      : tonGetDecalageHauteurCanard);
     property ZoneDAffichageWidth: single read getZoneDAffichageWidth;
     property ZoneDAffichageHeight: single read getZoneDAffichageHeight;
   public
+    property onGetDecalageHauteurCanard: tonGetDecalageHauteurCanard
+      read FonGetDecalageHauteurCanard write SetonGetDecalageHauteurCanard;
     constructor Create(AOwner: TComponent); override;
     procedure BougeLeCanardDeGaucheADroite;
     procedure BougeLeCanardDeDroiteAGauche;
@@ -36,6 +45,15 @@ implementation
 
 {$R *.fmx}
 { TFrame3 }
+
+procedure TSpriteCanard.ActionPendantLeDeplacement(Sender: TObject);
+begin
+  if assigned(onGetDecalageHauteurCanard) then
+  begin
+    DecalageY := onGetDecalageHauteurCanard(Position.x, Position.y);
+    Position.y := PosY + DecalageY;
+  end;
+end;
 
 procedure TSpriteCanard.BougeLeCanardDeDroiteAGauche;
 begin
@@ -59,6 +77,7 @@ begin
   name := '';
   width := Cible.width;
   Height := Cible.Height;
+  DecalageY := 0;
 end;
 
 procedure TSpriteCanard.DeLaDroiteVersLaGaucheFinish(Sender: TObject);
@@ -93,11 +112,18 @@ end;
 
 procedure TSpriteCanard.InitialiseZoneDeDeplacement;
 begin
-  Position.y := ZoneDAffichageHeight - Cible.Height;
+  PosY := ZoneDAffichageHeight - Cible.Height;
+  Position.y := PosY + DecalageY;
   DeLaGaucheVersLaDroite.StartValue := -Cible.width;
   DeLaGaucheVersLaDroite.StopValue := ZoneDAffichageWidth;
   DeLaDroiteVersLaGauche.StartValue := DeLaGaucheVersLaDroite.StopValue;
   DeLaDroiteVersLaGauche.StopValue := DeLaGaucheVersLaDroite.StartValue;
+end;
+
+procedure TSpriteCanard.SetonGetDecalageHauteurCanard
+  (const Value: tonGetDecalageHauteurCanard);
+begin
+  FonGetDecalageHauteurCanard := Value;
 end;
 
 end.

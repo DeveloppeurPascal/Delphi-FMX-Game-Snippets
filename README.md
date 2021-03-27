@@ -27,6 +27,8 @@ Les projets de ce dépôt sont :
 
 * AnimationVagues
 
+* AnimationVaguesEtCanards
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero :
@@ -38,8 +40,3 @@ https://apprendre-delphi.fr/apprendre-la-programmation-avec-delphi/
 Retrouvez les rediffusions de mes conférences en ligne / webinaires depuis la page https://developpeur-pascal.fr/p/_6007-webinaires.html
 
 Enfin, si vous préférez la lecture à la vidéo, vous trouverez tous les livres récents publiés sur Delphi et le langage Pascal sur https://delphi-books.com/
-
-
-TODO 
-vagues
-effet parallax
