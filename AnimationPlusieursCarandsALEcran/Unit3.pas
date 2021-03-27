@@ -16,6 +16,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnAjoutCanardClick(Sender: TObject);
+    procedure zoneBasResize(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -55,6 +56,20 @@ end;
 procedure TForm3.FormDestroy(Sender: TObject);
 begin
   ListeCanards.free;
+end;
+
+procedure TForm3.zoneBasResize(Sender: TObject);
+var
+  zone: TLayout;
+  i: integer;
+begin
+  if (Sender is TLayout) then
+  begin
+    zone := Sender as TLayout;
+    for i := 0 to zone.ChildrenCount - 1 do
+      if (zone.Children[i] is TSpriteCanard) then
+        (zone.Children[i] as TSpriteCanard).InitialiseZoneDeDeplacement;
+  end;
 end;
 
 end.

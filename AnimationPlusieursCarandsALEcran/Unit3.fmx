@@ -17,6 +17,7 @@ object Form3: TForm3
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
+    OnResize = zoneBasResize
   end
   object zoneHaut: TLayout
     Align = Bottom
@@ -25,6 +26,7 @@ object Form3: TForm3
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
+    OnResize = zoneBasResize
   end
   object btnAjoutCanard: TButton
     Position.X = 192.000000000000000000
