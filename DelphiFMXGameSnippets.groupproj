@@ -15,6 +15,9 @@
         <Projects Include="MusiqueDAmbiance\MusiqueDAmbiance.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="EffetsSonores\EffetsSonores.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="MusiqueDAmbiance:Make">
         <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj" Targets="Make"/>
     </Target>
+    <Target Name="EffetsSonores">
+        <MSBuild Projects="EffetsSonores\EffetsSonores.dproj"/>
+    </Target>
+    <Target Name="EffetsSonores:Clean">
+        <MSBuild Projects="EffetsSonores\EffetsSonores.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EffetsSonores:Make">
+        <MSBuild Projects="EffetsSonores\EffetsSonores.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
