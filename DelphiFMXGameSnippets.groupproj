@@ -24,6 +24,9 @@
         <Projects Include="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnimationGrossissement\AnimationGrossissement.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -95,14 +98,23 @@
     <Target Name="AnimationVaguesEtCanards:Make">
         <MSBuild Projects="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj" Targets="Make"/>
     </Target>
+    <Target Name="AnimationGrossissement">
+        <MSBuild Projects="AnimationGrossissement\AnimationGrossissement.dproj"/>
+    </Target>
+    <Target Name="AnimationGrossissement:Clean">
+        <MSBuild Projects="AnimationGrossissement\AnimationGrossissement.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationGrossissement:Make">
+        <MSBuild Projects="AnimationGrossissement\AnimationGrossissement.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
