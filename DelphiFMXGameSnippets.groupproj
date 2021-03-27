@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4FC3C9C5-8E6D-4BFC-8D29-9A272A0BF1DA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AnimationDroiteGauche\AnimationDroiteGauche.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnimationSprite\Animationsprite.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AnimationDroiteGauche">
+        <MSBuild Projects="AnimationDroiteGauche\AnimationDroiteGauche.dproj"/>
+    </Target>
+    <Target Name="AnimationDroiteGauche:Clean">
+        <MSBuild Projects="AnimationDroiteGauche\AnimationDroiteGauche.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationDroiteGauche:Make">
+        <MSBuild Projects="AnimationDroiteGauche\AnimationDroiteGauche.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Animationsprite">
+        <MSBuild Projects="AnimationSprite\Animationsprite.dproj"/>
+    </Target>
+    <Target Name="Animationsprite:Clean">
+        <MSBuild Projects="AnimationSprite\Animationsprite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Animationsprite:Make">
+        <MSBuild Projects="AnimationSprite\Animationsprite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnimationPlusieursCarandsALEcran">
+        <MSBuild Projects="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj"/>
+    </Target>
+    <Target Name="AnimationPlusieursCarandsALEcran:Clean">
+        <MSBuild Projects="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationPlusieursCarandsALEcran:Make">
+        <MSBuild Projects="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
