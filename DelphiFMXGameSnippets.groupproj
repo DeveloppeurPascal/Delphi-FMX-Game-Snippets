@@ -12,6 +12,9 @@
         <Projects Include="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="MusiqueDAmbiance\MusiqueDAmbiance.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="AnimationPlusieursCarandsALEcran:Make">
         <MSBuild Projects="AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dproj" Targets="Make"/>
     </Target>
+    <Target Name="MusiqueDAmbiance">
+        <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj"/>
+    </Target>
+    <Target Name="MusiqueDAmbiance:Clean">
+        <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MusiqueDAmbiance:Make">
+        <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
