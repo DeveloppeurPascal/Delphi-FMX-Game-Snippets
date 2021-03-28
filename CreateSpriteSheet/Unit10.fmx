@@ -1,0 +1,70 @@
+object Form10: TForm10
+  Left = 0
+  Top = 0
+  Caption = 'Creation de sprite sheet '#224' partir d'#39'images de taille identique'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ListBox1: TListBox
+    Align = Left
+    Size.Width = 200.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = ListBox1ItemClick
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 476.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 423.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnCreeSpriteSheet: TButton
+      Align = Top
+      Size.Width = 423.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Cr'#233'er Sprite Sheet'
+      OnClick = btnCreeSpriteSheetClick
+    end
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 423.000000000000000000
+      Size.Height = 436.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 423.000000000000000000
+      Viewport.Height = 436.000000000000000000
+      object FlowLayout1: TFlowLayout
+        Align = Top
+        Size.Width = 423.000000000000000000
+        Size.Height = 300.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Justify = Left
+        JustifyLastLine = Left
+        FlowDirection = LeftToRight
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Left
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 200.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

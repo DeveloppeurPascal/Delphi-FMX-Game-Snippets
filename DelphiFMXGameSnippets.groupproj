@@ -30,6 +30,9 @@
         <Projects Include="CanardPivot\CanardPivot.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="CreateSpriteSheet\CreateSpriteSheet.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -119,14 +122,23 @@
     <Target Name="CanardPivot:Make">
         <MSBuild Projects="CanardPivot\CanardPivot.dproj" Targets="Make"/>
     </Target>
+    <Target Name="CreateSpriteSheet">
+        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj"/>
+    </Target>
+    <Target Name="CreateSpriteSheet:Clean">
+        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CreateSpriteSheet:Make">
+        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
