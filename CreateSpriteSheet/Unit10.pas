@@ -38,7 +38,8 @@ implementation
 {$R *.fmx}
 
 uses
-  System.IOUtils, System.Math, system.Generics.Collections,system.Generics.Defaults;
+  System.IOUtils, System.Math, System.Generics.Collections,
+  System.Generics.Defaults;
 
 procedure TForm10.AfficheSousDossiers(DossierParent: string);
 var
@@ -72,7 +73,7 @@ begin
     FlowLayout1.height := 100;
     // affiche les PNG du dossier
     lstFichiers := tdirectory.GetFiles(DossierActuel);
-    TArray.Sort<String>(lstfichiers, TStringComparer.Ordinal);
+    TArray.Sort<String>(lstFichiers, TStringComparer.Ordinal);
     for i := 0 to length(lstFichiers) - 1 do
       if (tpath.GetExtension(lstFichiers[i]).tolower = '.png') then
       begin
@@ -108,30 +109,32 @@ begin
     col := 0;
     w := 0;
     h := 0;
+    spritesheet := nil;
     NbRow := trunc(sqrt(NbPNGDansDossier));
     NbCol := ceil(NbPNGDansDossier / NbRow);
     img := tbitmap.Create;
     try
       for i := 0 to length(lstFichiers) - 1 do
-      begin
-        img.LoadFromFile(lstFichiers[i]);
-        if (i = 0) then
+        if (not lstFichiers[i].tolower.EndsWith('-spritesheet.png')) then
         begin
-          row := 0;
-          col := 0;
-          w := img.Width;
-          h := img.height;
-          spritesheet := tbitmap.Create(w * NbCol, h * NbRow);
+          img.LoadFromFile(lstFichiers[i]);
+          if (not assigned(spritesheet)) then
+          begin
+            row := 0;
+            col := 0;
+            w := img.Width;
+            h := img.height;
+            spritesheet := tbitmap.Create(w * NbCol, h * NbRow);
+          end;
+          spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width - 1,
+            img.height - 1), col * w, row * h);
+          inc(col);
+          if (col >= NbCol) then
+          begin
+            col := 0;
+            inc(row);
+          end;
         end;
-        spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width - 1,
-          img.height - 1), col * w, row * h);
-        inc(col);
-        if (col >= NbCol) then
-        begin
-          col := 0;
-          inc(row);
-        end;
-      end;
       // TODO : proposer de choisir le nom de la spritesheet ou vérifier son existence avant écrasement
       if assigned(spritesheet) then
       begin
