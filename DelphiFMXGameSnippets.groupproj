@@ -36,6 +36,12 @@
         <Projects Include="AnimSpriteExplosion\AnimSpriteExplosion.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnimSpriteEauDuLac\AnimSpriteEauDuLac.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnimSpritePersonnage\AnimSpritePersonnage.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -143,14 +149,32 @@
     <Target Name="AnimSpriteExplosion:Make">
         <MSBuild Projects="AnimSpriteExplosion\AnimSpriteExplosion.dproj" Targets="Make"/>
     </Target>
+    <Target Name="AnimSpriteEauDuLac">
+        <MSBuild Projects="AnimSpriteEauDuLac\AnimSpriteEauDuLac.dproj"/>
+    </Target>
+    <Target Name="AnimSpriteEauDuLac:Clean">
+        <MSBuild Projects="AnimSpriteEauDuLac\AnimSpriteEauDuLac.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimSpriteEauDuLac:Make">
+        <MSBuild Projects="AnimSpriteEauDuLac\AnimSpriteEauDuLac.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnimSpritePersonnage">
+        <MSBuild Projects="AnimSpritePersonnage\AnimSpritePersonnage.dproj"/>
+    </Target>
+    <Target Name="AnimSpritePersonnage:Clean">
+        <MSBuild Projects="AnimSpritePersonnage\AnimSpritePersonnage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimSpritePersonnage:Make">
+        <MSBuild Projects="AnimSpritePersonnage\AnimSpritePersonnage.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
