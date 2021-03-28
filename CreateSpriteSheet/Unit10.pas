@@ -38,7 +38,7 @@ implementation
 {$R *.fmx}
 
 uses
-  System.IOUtils;
+  System.IOUtils, System.Math;
 
 procedure TForm10.AfficheSousDossiers(DossierParent: string);
 var
@@ -94,7 +94,7 @@ end;
 
 procedure TForm10.btnCreeSpriteSheetClick(Sender: TObject);
 var
-  nbColPerRow: integer;
+  NbCol, NbRow: integer;
   row, col: integer;
   spritesheet, img: tbitmap;
   w, h: integer;
@@ -106,8 +106,8 @@ begin
     col := 0;
     w := 0;
     h := 0;
-    // TODO : corriger le découpage (exemple 6 images donne 4x4 au lieu de 3x2 ou 2x3)
-    nbColPerRow := round(sqrt(NbPNGDansDossier));
+    NbRow := trunc(sqrt(NbPNGDansDossier));
+    NbCol := ceil(NbPNGDansDossier / NbRow);
     img := tbitmap.Create;
     try
       for i := 0 to length(lstFichiers) - 1 do
@@ -119,12 +119,12 @@ begin
           col := 0;
           w := img.Width;
           h := img.height;
-          spritesheet := tbitmap.Create(w * nbColPerRow, h * nbColPerRow);
+          spritesheet := tbitmap.Create(w * NbCol, h * NbRow);
         end;
         spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width - 1,
           img.height - 1), col * w, row * h);
         inc(col);
-        if (col >= nbColPerRow) then
+        if (col >= NbCol) then
         begin
           col := 0;
           inc(row);
