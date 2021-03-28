@@ -106,6 +106,7 @@ begin
     col := 0;
     w := 0;
     h := 0;
+    // TODO : corriger le découpage (exemple 6 images donne 4x4 au lieu de 3x2 ou 2x3)
     nbColPerRow := round(sqrt(NbPNGDansDossier));
     img := tbitmap.Create;
     try
