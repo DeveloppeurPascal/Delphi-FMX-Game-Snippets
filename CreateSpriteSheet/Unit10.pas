@@ -38,7 +38,7 @@ implementation
 {$R *.fmx}
 
 uses
-  System.IOUtils, System.Math;
+  System.IOUtils, System.Math, system.Generics.Collections,system.Generics.Defaults;
 
 procedure TForm10.AfficheSousDossiers(DossierParent: string);
 var
@@ -72,7 +72,7 @@ begin
     FlowLayout1.height := 100;
     // affiche les PNG du dossier
     lstFichiers := tdirectory.GetFiles(DossierActuel);
-    // TODO : vérifier que les fichiers sont triés par ordre alphabétique, le faire si ce n'est pas le cas
+    TArray.Sort<String>(lstfichiers, TStringComparer.Ordinal);
     for i := 0 to length(lstFichiers) - 1 do
       if (tpath.GetExtension(lstFichiers[i]).tolower = '.png') then
       begin
