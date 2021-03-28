@@ -132,9 +132,12 @@ begin
       end;
       // TODO : proposer de choisir le nom de la spritesheet ou vérifier son existence avant écrasement
       if assigned(spritesheet) then
+      begin
         spritesheet.SaveToFile(tpath.combine(DossierActuel,
           tpath.GetFileNameWithoutExtension(DossierActuel) +
           '-spritesheet.png'));
+        spritesheet.free;
+      end;
       showmessage('Fichier créé');
     finally
       img.free;
@@ -154,5 +157,11 @@ procedure TForm10.ListBox1ItemClick(const Sender: TCustomListBox;
 begin
   AfficheSousDossiers(Item.tagstring);
 end;
+
+initialization
+
+{$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := true;
+{$ENDIF}
 
 end.
