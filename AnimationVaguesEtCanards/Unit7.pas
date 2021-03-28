@@ -21,7 +21,7 @@ type
     ListeCanards: TSpriteCanardList;
   public
     { Déclarations publiques }
-    function DecalageHauteurCanard(x, y: single): integer;
+    function DecalageHauteurCanard(canard: TSpriteCanard): integer;
   end;
 
 var
@@ -34,7 +34,7 @@ implementation
 const
   CNbMaxCanards = 10;
 
-function TForm7.DecalageHauteurCanard(x, y: single): integer;
+function TForm7.DecalageHauteurCanard(canard: TSpriteCanard): integer;
 begin
   result := -110 { on remonte le canard de sa haute pour voir le socle }
     + random(3) - 1;

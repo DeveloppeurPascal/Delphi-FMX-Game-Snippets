@@ -10,9 +10,10 @@ uses
 
 type
   TSpriteCanard = class;
-  tOnGetDecalageHauteurCanard = function(x, y: single): integer of object;
-  tOnClicSurCanard = procedure(CanardClique: TSpriteCanard) of object;
-  tOnClicSurBaton = procedure(CanardClique: TSpriteCanard) of object;
+  tOnGetDecalageHauteurCanard = function(Canard: TSpriteCanard)
+    : integer of object;
+  tOnClicSurCanard = procedure(Canard: TSpriteCanard) of object;
+  tOnClicSurBaton = procedure(Canard: TSpriteCanard) of object;
 
   TSpriteCanard = class(TFrame)
     Cible: TLayout;
@@ -28,19 +29,24 @@ type
     procedure ClickSurBaton(Sender: TObject);
   private
     FonGetDecalageHauteurCanard: tOnGetDecalageHauteurCanard;
-    PosY, DecalageY: single;
     FonClicSurBaton: tOnClicSurBaton;
     FonClicSurCanard: tOnClicSurCanard;
     CanardEnPause: boolean;
+    MouvementEnBoucle: boolean;
+    FPosY: integer;
     function getZoneDAffichageHeight: single;
     function getZoneDAffichageWidth: single;
     procedure SetonGetDecalageHauteurCanard(const Value
       : tOnGetDecalageHauteurCanard);
     procedure SetonClicSurBaton(const Value: tOnClicSurBaton);
     procedure SetonClicSurCanard(const Value: tOnClicSurCanard);
+    function getDecalageY: integer;
+    procedure SetPosY(const Value: integer);
     property ZoneDAffichageWidth: single read getZoneDAffichageWidth;
     property ZoneDAffichageHeight: single read getZoneDAffichageHeight;
+    property DecalageY: integer read getDecalageY;
   public
+    property PosY: integer read FPosY write SetPosY;
     property onGetDecalageHauteurCanard: tOnGetDecalageHauteurCanard
       read FonGetDecalageHauteurCanard write SetonGetDecalageHauteurCanard;
     property onClicSurCanard: tOnClicSurCanard read FonClicSurCanard
@@ -48,11 +54,13 @@ type
     property onClicSurBaton: tOnClicSurBaton read FonClicSurBaton
       write SetonClicSurBaton;
     constructor Create(AOwner: TComponent); override;
-    procedure BougeLeCanardDeGaucheADroite;
-    procedure BougeLeCanardDeDroiteAGauche;
+    procedure BougeLeCanardDeGaucheADroite(AutoReverse: boolean = true);
+    procedure BougeLeCanardDeDroiteAGauche(AutoReverse: boolean = true);
     procedure ImmobiliseLeCanard;
     procedure BougeLeCanard;
     function isEnMouvement: boolean;
+    function isVersLaGauche: boolean;
+    function isVersLaDroite: boolean;
     procedure InitialiseZoneDeDeplacement;
   end;
 
@@ -64,12 +72,12 @@ implementation
 { TFrame3 }
 
 procedure TSpriteCanard.ActionPendantLeDeplacement(Sender: TObject);
+var
+  y: single;
 begin
-  if assigned(onGetDecalageHauteurCanard) then
-  begin
-    DecalageY := onGetDecalageHauteurCanard(Position.x, Position.y);
-    Position.y := PosY + DecalageY;
-  end;
+  y := PosY + DecalageY;
+  if y <> Position.y then
+    Position.y := y;
 end;
 
 procedure TSpriteCanard.BougeLeCanard;
@@ -82,9 +90,11 @@ begin
   // TODO : vérifier position de démarrage pour remettre valeur par défaut plutôt que startfromcurrent
 end;
 
-procedure TSpriteCanard.BougeLeCanardDeDroiteAGauche;
+procedure TSpriteCanard.BougeLeCanardDeDroiteAGauche(AutoReverse: boolean);
 begin
-// TODO : bizarrement, dans certains cas de canards immobilisés ou inclinés, ça ne repart pas à la bonne position en X  CanardEnPause := false;
+  // TODO : bizarrement, dans certains cas de canards immobilisés ou inclinés, ça ne repart pas à la bonne position en X
+  CanardEnPause := false;
+  MouvementEnBoucle := AutoReverse;
   DeLaGaucheVersLaDroite.StartFromCurrent := false;
   DeLaGaucheVersLaDroite.Enabled := false;
   DeLaDroiteVersLaGauche.StartFromCurrent := false;
@@ -93,10 +103,11 @@ begin
   Canard_VersLaDroite.Visible := DeLaGaucheVersLaDroite.Enabled;
 end;
 
-procedure TSpriteCanard.BougeLeCanardDeGaucheADroite;
+procedure TSpriteCanard.BougeLeCanardDeGaucheADroite(AutoReverse: boolean);
 begin
-// TODO : bizarrement, dans certains cas de canards immobilisés ou inclinés, ça ne repart pas à la bonne position en X
+  // TODO : bizarrement, dans certains cas de canards immobilisés ou inclinés, ça ne repart pas à la bonne position en X
   CanardEnPause := false;
+  MouvementEnBoucle := AutoReverse;
   DeLaDroiteVersLaGauche.StartFromCurrent := false;
   DeLaDroiteVersLaGauche.Enabled := false;
   DeLaGaucheVersLaDroite.StartFromCurrent := false;
@@ -108,13 +119,13 @@ end;
 procedure TSpriteCanard.ClickSurBaton(Sender: TObject);
 begin
   if assigned(onClicSurBaton) then
-    onClicSurBaton(self);
+    onClicSurBaton(Self);
 end;
 
 procedure TSpriteCanard.ClicSurCanard(Sender: TObject);
 begin
   if assigned(onClicSurCanard) then
-    onClicSurCanard(self);
+    onClicSurCanard(Self);
 end;
 
 constructor TSpriteCanard.Create(AOwner: TComponent);
@@ -123,20 +134,42 @@ begin
   name := '';
   width := Cible.width;
   Height := Cible.Height;
-  DecalageY := 0;
   CanardEnPause := false;
+  MouvementEnBoucle := false;
 end;
 
 procedure TSpriteCanard.DeLaDroiteVersLaGaucheFinish(Sender: TObject);
 begin
-  if not CanardEnPause then
-    BougeLeCanardDeGaucheADroite;
+  if (not CanardEnPause) then
+    if MouvementEnBoucle then
+      BougeLeCanardDeGaucheADroite(MouvementEnBoucle)
+    else
+      tthread.ForceQueue(nil,
+        procedure
+        begin
+          Self.free;
+        end);
 end;
 
 procedure TSpriteCanard.DeLaGaucheVersLaDroiteFinish(Sender: TObject);
 begin
-  if not CanardEnPause then
-    BougeLeCanardDeDroiteAGauche;
+  if (not CanardEnPause) then
+    if MouvementEnBoucle then
+      BougeLeCanardDeDroiteAGauche(MouvementEnBoucle)
+    else
+      tthread.ForceQueue(nil,
+        procedure
+        begin
+          Self.free;
+        end);
+end;
+
+function TSpriteCanard.getDecalageY: integer;
+begin
+  if assigned(onGetDecalageHauteurCanard) then
+    result := onGetDecalageHauteurCanard(Self)
+  else
+    result := 0;
 end;
 
 function TSpriteCanard.getZoneDAffichageHeight: single;
@@ -172,7 +205,7 @@ end;
 
 procedure TSpriteCanard.InitialiseZoneDeDeplacement;
 begin
-  PosY := ZoneDAffichageHeight - Cible.Height;
+  PosY := trunc(ZoneDAffichageHeight - Cible.Height);
   Position.y := PosY + DecalageY;
   DeLaGaucheVersLaDroite.StartValue := -Cible.width;
   DeLaGaucheVersLaDroite.StopValue := ZoneDAffichageWidth;
@@ -183,6 +216,16 @@ end;
 function TSpriteCanard.isEnMouvement: boolean;
 begin
   result := DeLaGaucheVersLaDroite.Enabled or DeLaDroiteVersLaGauche.Enabled;
+end;
+
+function TSpriteCanard.isVersLaDroite: boolean;
+begin
+  result := Canard_VersLaDroite.Visible;
+end;
+
+function TSpriteCanard.isVersLaGauche: boolean;
+begin
+  result := Canard_VersLaGauche.Visible;
 end;
 
 procedure TSpriteCanard.SetonClicSurBaton(const Value: tOnClicSurBaton);
@@ -199,6 +242,11 @@ procedure TSpriteCanard.SetonGetDecalageHauteurCanard
   (const Value: tOnGetDecalageHauteurCanard);
 begin
   FonGetDecalageHauteurCanard := Value;
+end;
+
+procedure TSpriteCanard.SetPosY(const Value: integer);
+begin
+  FPosY := Value;
 end;
 
 end.

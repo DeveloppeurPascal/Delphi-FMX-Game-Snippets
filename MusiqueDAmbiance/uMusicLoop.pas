@@ -24,7 +24,7 @@ type
     property audioEnBoucle: boolean read FaudioEnBoucle write SetaudioEnBoucle;
   public
     { Déclarations publiques }
-    procedure Load(Filename: string);
+    function Load(Filename: string): TMusicLoop;
     procedure Play(Filename: string; LectureEnBoucle: boolean = true); overload;
     procedure Play(LectureEnBoucle: boolean = true); overload;
     procedure PlaySound;
@@ -77,7 +77,7 @@ begin
   result := FaudioActif;
 end;
 
-procedure TMusicLoop.Load(Filename: string);
+function TMusicLoop.Load(Filename: string): TMusicLoop;
 begin
   if (not Filename.IsEmpty) and (tfile.Exists(Filename)) then
     try
@@ -87,6 +87,7 @@ begin
     except
       audioActif := false;
     end;
+  result := self;
 end;
 
 procedure TMusicLoop.Play(LectureEnBoucle: boolean);
