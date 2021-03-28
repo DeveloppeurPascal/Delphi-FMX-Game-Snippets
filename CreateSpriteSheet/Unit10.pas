@@ -58,8 +58,10 @@ begin
         tpath.GetDirectoryName(DossierActuel);
       lstDossiers := tdirectory.GetDirectories(DossierActuel);
       for i := 0 to length(lstDossiers) - 1 do
-        ListBox1.ListItems[ListBox1.Items.Add(tpath.GetFileName(lstDossiers[i]))
-          ].tagstring := lstDossiers[i];
+        if tdirectory.Exists(lstDossiers[i]) then
+          ListBox1.ListItems
+            [ListBox1.Items.Add(tpath.GetFileName(lstDossiers[i]))].tagstring :=
+            lstDossiers[i];
     finally
       ListBox1.EndUpdate;
     end;
