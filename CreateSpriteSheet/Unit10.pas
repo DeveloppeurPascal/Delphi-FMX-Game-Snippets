@@ -16,6 +16,8 @@ type
     Splitter1: TSplitter;
     VertScrollBox1: TVertScrollBox;
     FlowLayout1: TFlowLayout;
+    StatusBar1: TStatusBar;
+    Label1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure ListBox1ItemClick(const Sender: TCustomListBox;
       const Item: TListBoxItem);
@@ -169,4 +171,5 @@ initialization
   ReportMemoryLeaksOnShutdown := true;
 {$ENDIF}
 
+// TODO : à déboguer sur macOS car des violations d'accès apparaissent parfois
 end.
