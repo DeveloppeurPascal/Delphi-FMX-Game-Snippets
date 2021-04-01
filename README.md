@@ -72,8 +72,7 @@ Dans Delphi, le framework FireMonkey propose des tas de types d'animations (au s
 
 La plupart des sources/banques d'images/graphistes proposant des animations les propose déjà sous forme de spritesheet ou de séries d'images mais elles ne sont pas toujours compatibles avec le comportement du TBitmapAnimation et il est donc nécessaire de créer nos propres spritesheets à partir des images de l'animation.
 
-C'est l'objectif de ce programme dont vous retrouverez une version compilée sur
-https://gamolf.itch.io/spritesheet-creator
+Téléchargez le programme compilé depuis https://gamolf.itch.io/spritesheet-creator
 
 * AnimSpriteExplosion
 
@@ -89,7 +88,9 @@ Et on finit par faire marcher puis sauter un ninja...
 
 * DuckJoke
 
-Toout est dans le nom... Un programme créé un 1er avril que je dédie à toutes les personnes qui oublient de verrouiller leur session lorsqu'elles sont dans les transports en commun.
+Tout est dans le nom... Un programme créé un 1er avril que je dédie à toutes les personnes qui oublient de verrouiller leur session lorsqu'elles sont dans les transports en commun.
+
+Téléchargez le programme compilé depuis https://gamolf.itch.io/duck-joke
 
 -----
 
