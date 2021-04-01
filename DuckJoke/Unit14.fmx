@@ -1,0 +1,43 @@
+object frmDuckJoke: TfrmDuckJoke
+  Left = 0
+  Top = 0
+  Border.Styling = False
+  BorderIcons = []
+  BorderStyle = None
+  Caption = 'Duck Joke'
+  ClientHeight = 480
+  ClientWidth = 640
+  Transparency = True
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  ShowHint = False
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  inline SpriteCanard1: TSpriteCanard
+    HitTest = False
+    Size.Width = 131.000000000000000000
+    Size.Height = 252.000000000000000000
+    Size.PlatformDefault = False
+    inherited Cible: TLayout
+      inherited Baton: TRectangle
+        HitTest = False
+      end
+      inherited Canard_VersLaDroite: TRectangle
+        HitTest = False
+      end
+      inherited Canard_VersLaGauche: TRectangle
+        HitTest = False
+      end
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 304
+    Top = 224
+  end
+end
