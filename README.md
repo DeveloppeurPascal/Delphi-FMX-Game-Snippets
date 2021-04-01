@@ -87,6 +87,10 @@ On en profite pour faire de l'eau qui bouge sur la rive d'un lac. L'image utilis
 
 Et on finit par faire marcher puis sauter un ninja...
 
+* DuckJoke
+
+Toout est dans le nom... Un programme créé un 1er avril que je dédie à toutes les personnes qui oublient de verrouiller leur session lorsqu'elles sont dans les transports en commun.
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
