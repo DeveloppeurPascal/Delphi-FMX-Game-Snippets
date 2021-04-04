@@ -1,0 +1,24 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Jeu des cercles'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object TimerGenerateur: TTimer
+    OnTimer = TimerGenerateurTimer
+    Left = 136
+    Top = 80
+  end
+  object TimerBoucleDuJeu: TTimer
+    Interval = 33
+    OnTimer = TimerBoucleDuJeuTimer
+    Left = 312
+    Top = 232
+  end
+end

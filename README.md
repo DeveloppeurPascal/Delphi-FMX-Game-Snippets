@@ -92,6 +92,10 @@ Tout est dans le nom... Un programme créé un 1er avril que je dédie à toutes
 
 Téléchargez le programme compilé depuis https://gamolf.itch.io/duck-joke
 
+* JeuDesCercles
+
+Un exemple de programme avec des cercles en guise de sprite qui permet de gérer leurs mouvements, les collisions entre eux et rebonds.
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").

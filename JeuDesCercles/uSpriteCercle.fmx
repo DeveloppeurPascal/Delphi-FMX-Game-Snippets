@@ -1,0 +1,15 @@
+object SpriteCercle: TSpriteCercle
+  HitTest = False
+  Size.Width = 352.000000000000000000
+  Size.Height = 309.000000000000000000
+  Size.PlatformDefault = False
+  OnResize = FrameResize
+  object Circle1: TCircle
+    Align = Fit
+    Locked = True
+    Size.Width = 309.000000000000000000
+    Size.Height = 309.000000000000000000
+    Size.PlatformDefault = False
+    OnClick = Circle1Click
+  end
+end
