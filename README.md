@@ -114,6 +114,10 @@ Son d'ambiance provenant de https://www.soundboard.com/sb/sound/918028
 
 Utilise une unité du projet https://github.com/DeveloppeurPascal/librairies à placer dans la même arborescence que ce groupe de projet. "librairies" doit être au niveau de "DelphiFMXGameSnippets".
 
+* AnimMeteoNeige
+
+Effet de neige qui tombe sur plusieurs avec éventuelement du vent.
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").

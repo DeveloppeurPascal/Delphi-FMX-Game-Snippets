@@ -1,0 +1,92 @@
+object Form18: TForm18
+  Left = 0
+  Top = 0
+  Caption = 'Form18'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object ZIndex0: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object ZIndex1: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    inline Canard1: TSpriteCanard
+      HitTest = False
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 131.000000000000000000
+      Size.Height = 252.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object ZIndex2: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    inline Canard2: TSpriteCanard
+      HitTest = False
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 131.000000000000000000
+      Size.Height = 252.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object zoneBoutons: TLayout
+    Align = Bottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object btnVentDeGauche: TButton
+      Align = Left
+      Size.Width = 200.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'btnVentDeGauche'
+      OnClick = btnVentDeGaucheClick
+    end
+    object btnPasDeVent: TButton
+      Align = Center
+      Size.Width = 200.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'btnPasDeVent'
+      OnClick = btnPasDeVentClick
+    end
+    object btnVentDeDroite: TButton
+      Align = Right
+      Position.X = 440.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'btnVentDeDroite'
+      OnClick = btnVentDeDroiteClick
+    end
+  end
+  object animFlocons: TTimer
+    Interval = 30
+    OnTimer = animFloconsTimer
+    Left = 304
+    Top = 224
+  end
+end

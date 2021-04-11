@@ -57,6 +57,9 @@
         <Projects Include="AffichageTexteGeneriqueStarWars\AffichageTexteGeneriqueStarWars.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnimMeteoNeige\AnimMeteoNeige.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -227,14 +230,23 @@
     <Target Name="AffichageTexteGeneriqueStarWars:Make">
         <MSBuild Projects="AffichageTexteGeneriqueStarWars\AffichageTexteGeneriqueStarWars.dproj" Targets="Make"/>
     </Target>
+    <Target Name="AnimMeteoNeige">
+        <MSBuild Projects="AnimMeteoNeige\AnimMeteoNeige.dproj"/>
+    </Target>
+    <Target Name="AnimMeteoNeige:Clean">
+        <MSBuild Projects="AnimMeteoNeige\AnimMeteoNeige.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimMeteoNeige:Make">
+        <MSBuild Projects="AnimMeteoNeige\AnimMeteoNeige.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles;AnimGagneDesPoints;AnimScore;AffichageTexteGeneriqueStarWars"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles;AnimGagneDesPoints;AnimScore;AffichageTexteGeneriqueStarWars;AnimMeteoNeige"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean;AnimGagneDesPoints:Clean;AnimScore:Clean;AffichageTexteGeneriqueStarWars:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean;AnimGagneDesPoints:Clean;AnimScore:Clean;AffichageTexteGeneriqueStarWars:Clean;AnimMeteoNeige:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make;AnimGagneDesPoints:Make;AnimScore:Make;AffichageTexteGeneriqueStarWars:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make;AnimGagneDesPoints:Make;AnimScore:Make;AffichageTexteGeneriqueStarWars:Make;AnimMeteoNeige:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
