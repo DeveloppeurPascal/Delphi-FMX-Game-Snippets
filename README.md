@@ -104,6 +104,16 @@ Animation lorsqu'on gagne des points dans un jeu.
 
 Animation du changement de valeur d'un score.
 
+* AffichageTexteGeneriqueStarWars
+
+Affichage d'un texte façon générique de Star Wars (défilement du bas vers le centre de l'écran en profondeur).
+
+Image de fond provenant de la NASA.
+Son d'ambiance provenant de https://www.soundboard.com/sb/sound/918028
+(téléchargé au premier lancement du programme dans le dossier de l'exe)
+
+Utilise une unité du projet https://github.com/DeveloppeurPascal/librairies à placer dans la même arborescence que ce groupe de projet. "librairies" doit être au niveau de "DelphiFMXGameSnippets".
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
