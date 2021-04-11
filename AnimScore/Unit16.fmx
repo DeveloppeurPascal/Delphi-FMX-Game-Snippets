@@ -1,0 +1,64 @@
+object Form16: TForm16
+  Left = 0
+  Top = 0
+  Caption = 'Form16'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lblScore: TLabel
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'lblScore'
+    TabOrder = 0
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 200.000000000000000000
+    Size.Height = 120.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnEnleveDesPoints: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 190.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'btnEnleveDesPoints'
+      OnClick = btnEnleveDesPointsClick
+    end
+    object btnAjouteDesPoints: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 190.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'btnAjouteDesPoints'
+      OnClick = btnAjouteDesPointsClick
+    end
+  end
+  object animAffichageScore: TTimer
+    Interval = 10
+    OnTimer = animAffichageScoreTimer
+    Left = 512
+    Top = 40
+  end
+end
