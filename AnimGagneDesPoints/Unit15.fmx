@@ -1,0 +1,44 @@
+object Form15: TForm15
+  Left = 0
+  Top = 0
+  Caption = 'Form15'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Center
+    TabOrder = 0
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object lblScore: TLabel
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'lblScore'
+    TabOrder = 1
+  end
+  object txtPointsAjoutes: TText
+    HitTest = False
+    Position.X = 104.000000000000000000
+    Position.Y = 368.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object animPointsAjoutes: TFloatAnimation
+      Duration = 1.000000000000000000
+      Interpolation = Circular
+      OnFinish = animPointsAjoutesFinish
+      PropertyName = 'Position.Y'
+      StartValue = 0.000000000000000000
+      StartFromCurrent = True
+      StopValue = 0.000000000000000000
+    end
+  end
+end

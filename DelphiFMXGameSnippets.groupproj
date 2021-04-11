@@ -48,6 +48,9 @@
         <Projects Include="JeuDesCercles\JeuDesCercles.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnimGagneDesPoints\AnimGagneDesPoints.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -191,14 +194,23 @@
     <Target Name="JeuDesCercles:Make">
         <MSBuild Projects="JeuDesCercles\JeuDesCercles.dproj" Targets="Make"/>
     </Target>
+    <Target Name="AnimGagneDesPoints">
+        <MSBuild Projects="AnimGagneDesPoints\AnimGagneDesPoints.dproj"/>
+    </Target>
+    <Target Name="AnimGagneDesPoints:Clean">
+        <MSBuild Projects="AnimGagneDesPoints\AnimGagneDesPoints.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimGagneDesPoints:Make">
+        <MSBuild Projects="AnimGagneDesPoints\AnimGagneDesPoints.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles;AnimGagneDesPoints"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean;AnimGagneDesPoints:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make;AnimGagneDesPoints:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
