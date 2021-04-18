@@ -118,6 +118,15 @@ Utilise une unité du projet https://github.com/DeveloppeurPascal/librairies à 
 
 Effet de neige qui tombe sur plusieurs avec éventuelement du vent.
 
+* AnimCroixQuiTournent
+
+Le but du jeu était de refaire l'animation correspondant à ce GIF:
+https://twitter.com/OrgPhysics/status/1200324633096065024
+Des croix blanches et noires qui tournent en alternance.
+
+Cet exemple utilise les composants Radiant Shapes disponibles depuis GetIt.
+https://getitnow.embarcadero.com/bonus-radiant-shapes/
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").

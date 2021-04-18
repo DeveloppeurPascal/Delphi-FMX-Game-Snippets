@@ -1,0 +1,21 @@
+object Form19: TForm19
+  Left = 0
+  Top = 0
+  Caption = 'Form19'
+  ClientHeight = 577
+  ClientWidth = 959
+  Fill.Color = xFFEE4646
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 104
+    Top = 56
+  end
+end
