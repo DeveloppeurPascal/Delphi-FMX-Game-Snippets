@@ -127,6 +127,8 @@ Des croix blanches et noires qui tournent en alternance.
 Cet exemple utilise les composants Radiant Shapes disponibles depuis GetIt.
 https://getitnow.embarcadero.com/bonus-radiant-shapes/
 
+TODO : comprendre pourquoi un contour persiste lors de la rotation des croix puis le corriger
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
