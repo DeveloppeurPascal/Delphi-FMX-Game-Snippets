@@ -131,9 +131,10 @@ procedure TMusicLoop.SetaudioOn(const Value: boolean);
 begin
   FaudioOn := Value;
   if audioActif then
-    if Value then
+    if Value and (audio.State <> TMediaState.Playing) and
+      (not audio.Filename.IsEmpty) then
       audio.Play
-    else
+    else if (not Value) and (audio.State = TMediaState.Playing) then
       audio.Stop;
 end;
 
