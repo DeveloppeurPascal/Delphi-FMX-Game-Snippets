@@ -131,6 +131,13 @@ TODO : comprendre pourquoi un contour persiste lors de la rotation des croix pui
 
 -----
 
+## TODO LIST
+
+* Faire un programme de test de l'unité uMusicLoop.pas sur toutes les plateformes, en tant que son, simple ou multiple, et en tant que boucle d'ambiance.
+* Ajouter la gestion du volume sur la musique
+
+-----
+
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
 En entreprise vous pouvez aussi tester Delphi avec la version d'évaluation.
 https://www.embarcadero.com/products/delphi
