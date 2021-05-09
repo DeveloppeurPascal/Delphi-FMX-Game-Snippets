@@ -24,6 +24,7 @@ type
     procedure AnimationGeneriqueDemarrer;
     procedure AnimationGeneriqueTerminee;
     procedure LanceAudio(FichierMP3: string);
+    procedure DeclencheLecture(fichier: string);
   public
     { Déclarations publiques }
   end;
@@ -39,20 +40,33 @@ uses
   System.IOUtils, u_download, uMusicLoop;
 
 procedure TForm17.AnimationGeneriqueDemarrer;
+var
+  fichier: string;
 begin
   // chemin Windows en dur, à adapter selon la plateforme
   txtGenerique.Width := zoneTexteGenerique2D.Width;
-  txtGenerique.Text := tfile.ReadAllText('..\..\..\README.md', TEncoding.UTF8);
-  txtGenerique.AutoSize := true;
-  txtGenerique.Position.y := zoneTexteGenerique2D.Height;
-  zoneTexteGenerique2D.Visible := true;
-  animTexteGenerique.Enabled := true;
+  // https://raw.githubusercontent.com/DeveloppeurPascal/DelphiFMXGameSnippets/main/README.md
+  fichier := tpath.combine(tpath.GetTempPath, 'README.md');
+  if not tfile.Exists(fichier) then
+    tdownload_file.download
+      ('https://raw.githubusercontent.com/DeveloppeurPascal/DelphiFMXGameSnippets/main/README.md',
+      fichier,
+      procedure
+      begin
+        DeclencheLecture(fichier);
+      end,
+      procedure
+      begin
+        showmessage(fichier + ' non trouvé');
+      end)
+  else
+    DeclencheLecture(fichier);
 end;
 
 procedure TForm17.AnimationGeneriqueTerminee;
 begin
   animTexteGenerique.Enabled := false;
-  ShowMessage('Générique terminé.');
+  showmessage('Générique terminé.');
 end;
 
 procedure TForm17.animTexteGeneriqueTimer(Sender: TObject);
@@ -64,13 +78,22 @@ begin
     AnimationGeneriqueTerminee;
 end;
 
+procedure TForm17.DeclencheLecture(fichier: string);
+begin
+  txtGenerique.Text := tfile.ReadAllText(fichier, TEncoding.UTF8);
+  txtGenerique.AutoSize := true;
+  txtGenerique.Position.y := zoneTexteGenerique2D.Height;
+  zoneTexteGenerique2D.Visible := true;
+  animTexteGenerique.Enabled := true;
+end;
+
 procedure TForm17.FormCreate(Sender: TObject);
 var
   fichier: string;
 begin
   zoneTexteGenerique2D.Visible := false;
   // https://www.soundboard.com/sb/sound/918028
-  fichier := 'soundboard_sound_918028.mp3';
+  fichier := tpath.combine(tpath.GetTempPath, 'soundboard_sound_918028.mp3');
   if not tfile.Exists(fichier) then
     tdownload_file.download
       ('https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Imperial+March&filename=22/227558-6ea81a03-cbc1-4d18-bdd6-9b031c6752ab.mp3',
