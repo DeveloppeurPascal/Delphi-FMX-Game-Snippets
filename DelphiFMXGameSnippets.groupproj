@@ -63,6 +63,9 @@
         <Projects Include="AnimCroixQuiTournent\AnimCroixQuiTournent.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="MusicLoopUnitTest\MusicLoopUnitTest.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -251,14 +254,23 @@
     <Target Name="AnimCroixQuiTournent:Make">
         <MSBuild Projects="AnimCroixQuiTournent\AnimCroixQuiTournent.dproj" Targets="Make"/>
     </Target>
+    <Target Name="MusicLoopUnitTest">
+        <MSBuild Projects="MusicLoopUnitTest\MusicLoopUnitTest.dproj"/>
+    </Target>
+    <Target Name="MusicLoopUnitTest:Clean">
+        <MSBuild Projects="MusicLoopUnitTest\MusicLoopUnitTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MusicLoopUnitTest:Make">
+        <MSBuild Projects="MusicLoopUnitTest\MusicLoopUnitTest.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles;AnimGagneDesPoints;AnimScore;AffichageTexteGeneriqueStarWars;AnimMeteoNeige;AnimCroixQuiTournent"/>
+        <CallTarget Targets="AnimationDroiteGauche;Animationsprite;AnimationPlusieursCarandsALEcran;MusiqueDAmbiance;EffetsSonores;AnimationVagues;AnimationVaguesEtCanards;AnimationGrossissement;CanardPivot;CreateSpriteSheet;AnimSpriteExplosion;AnimSpriteEauDuLac;AnimSpritePersonnage;DuckJoke;JeuDesCercles;AnimGagneDesPoints;AnimScore;AffichageTexteGeneriqueStarWars;AnimMeteoNeige;AnimCroixQuiTournent;MusicLoopUnitTest"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean;AnimGagneDesPoints:Clean;AnimScore:Clean;AffichageTexteGeneriqueStarWars:Clean;AnimMeteoNeige:Clean;AnimCroixQuiTournent:Clean"/>
+        <CallTarget Targets="AnimationDroiteGauche:Clean;Animationsprite:Clean;AnimationPlusieursCarandsALEcran:Clean;MusiqueDAmbiance:Clean;EffetsSonores:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimationGrossissement:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;AnimSpriteExplosion:Clean;AnimSpriteEauDuLac:Clean;AnimSpritePersonnage:Clean;DuckJoke:Clean;JeuDesCercles:Clean;AnimGagneDesPoints:Clean;AnimScore:Clean;AffichageTexteGeneriqueStarWars:Clean;AnimMeteoNeige:Clean;AnimCroixQuiTournent:Clean;MusicLoopUnitTest:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make;AnimGagneDesPoints:Make;AnimScore:Make;AffichageTexteGeneriqueStarWars:Make;AnimMeteoNeige:Make;AnimCroixQuiTournent:Make"/>
+        <CallTarget Targets="AnimationDroiteGauche:Make;Animationsprite:Make;AnimationPlusieursCarandsALEcran:Make;MusiqueDAmbiance:Make;EffetsSonores:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimationGrossissement:Make;CanardPivot:Make;CreateSpriteSheet:Make;AnimSpriteExplosion:Make;AnimSpriteEauDuLac:Make;AnimSpritePersonnage:Make;DuckJoke:Make;JeuDesCercles:Make;AnimGagneDesPoints:Make;AnimScore:Make;AffichageTexteGeneriqueStarWars:Make;AnimMeteoNeige:Make;AnimCroixQuiTournent:Make;MusicLoopUnitTest:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

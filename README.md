@@ -129,6 +129,17 @@ https://getitnow.embarcadero.com/bonus-radiant-shapes/
 
 TODO : comprendre pourquoi un contour persiste lors de la rotation des croix puis le corriger
 
+* MusicLoopUnitTest
+
+Programme multiplateforme de test des sons et musiques joués par l'unité uMusicLoop.pas
+(utile pour s'assurer de l'absence de bogue sur les plateformes à chaque version de Delphi)
+
+Utilise une unité du projet https://github.com/DeveloppeurPascal/librairies à placer dans la même arborescence que ce groupe de projet. "librairies" doit être au niveau de "DelphiFMXGameSnippets".
+
+Le son de test (WAV) est téléchargé au lancement du programme et mis en cache depuis la page https://opengameart.org/content/win-sound-effect avec comme url https://opengameart.org/sites/default/files/Win%20sound.wav
+
+La musique de test (MP3) est téléchargée au lancement du programme et mis en cache depuis la page https://opengameart.org/content/battle-theme-b-for-rpg avec comme URL https://opengameart.org/sites/default/files/battleThemeB.mp3
+
 -----
 
 ## TODO LIST

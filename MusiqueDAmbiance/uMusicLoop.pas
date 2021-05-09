@@ -18,12 +18,15 @@ type
     procedure SetaudioActif(const Value: boolean);
     procedure SetaudioOn(const Value: boolean);
     procedure SetaudioEnBoucle(const Value: boolean);
+    procedure SetVolume(const Value: byte);
+    function getVolume: byte;
     { Déclarations privées }
     property audioActif: boolean read FaudioActif write SetaudioActif;
     property audioOn: boolean read FaudioOn write SetaudioOn;
     property audioEnBoucle: boolean read FaudioEnBoucle write SetaudioEnBoucle;
   public
     { Déclarations publiques }
+    property Volume: byte read getVolume write SetVolume;
     function Load(Filename: string): TMusicLoop;
     procedure Play(Filename: string; LectureEnBoucle: boolean = true); overload;
     procedure Play(LectureEnBoucle: boolean = true); overload;
@@ -70,6 +73,11 @@ begin
   audioCheck.Interval := 100;
   FaudioOn := false;
   FaudioActif := false;
+end;
+
+function TMusicLoop.getVolume: byte;
+begin
+  result := round(audio.Volume * 100);
 end;
 
 function TMusicLoop.IsActive: boolean;
@@ -136,6 +144,12 @@ begin
       audio.Play
     else if (not Value) and (audio.State = TMediaState.Playing) then
       audio.Stop;
+end;
+
+procedure TMusicLoop.SetVolume(const Value: byte);
+begin
+  if (Value >= 0) and (Value <= 100) then
+    audio.Volume := Value / 100;
 end;
 
 procedure TMusicLoop.Stop;
