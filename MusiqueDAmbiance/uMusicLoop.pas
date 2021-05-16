@@ -6,6 +6,8 @@ uses
   System.SysUtils, System.Classes, FMX.Types, FMX.Media;
 
 type
+  TVolumeSonore = 0 .. 100;
+
   TMusicLoop = class(TDataModule)
     audio: TMediaPlayer;
     audioCheck: TTimer;
@@ -18,15 +20,15 @@ type
     procedure SetaudioActif(const Value: boolean);
     procedure SetaudioOn(const Value: boolean);
     procedure SetaudioEnBoucle(const Value: boolean);
-    procedure SetVolume(const Value: byte);
-    function getVolume: byte;
+    procedure SetVolume(const Value: TVolumeSonore);
+    function getVolume: TVolumeSonore;
     { Déclarations privées }
     property audioActif: boolean read FaudioActif write SetaudioActif;
     property audioOn: boolean read FaudioOn write SetaudioOn;
     property audioEnBoucle: boolean read FaudioEnBoucle write SetaudioEnBoucle;
   public
     { Déclarations publiques }
-    property Volume: byte read getVolume write SetVolume;
+    property Volume: TVolumeSonore read getVolume write SetVolume;
     function Load(Filename: string): TMusicLoop;
     procedure Play(Filename: string; LectureEnBoucle: boolean = true); overload;
     procedure Play(LectureEnBoucle: boolean = true); overload;
@@ -75,7 +77,7 @@ begin
   FaudioActif := false;
 end;
 
-function TMusicLoop.getVolume: byte;
+function TMusicLoop.getVolume: TVolumeSonore;
 begin
   result := round(audio.Volume * 100);
 end;
@@ -146,7 +148,7 @@ begin
       audio.Stop;
 end;
 
-procedure TMusicLoop.SetVolume(const Value: byte);
+procedure TMusicLoop.SetVolume(const Value: TVolumeSonore);
 begin
   if (Value >= 0) and (Value <= 100) then
     audio.Volume := Value / 100;
