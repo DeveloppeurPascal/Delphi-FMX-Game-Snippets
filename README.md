@@ -18,10 +18,12 @@ Des informations complémentaires seront prochainement disponibles sur le blog h
 Les projets de ce dépôt sont dans le groupe fr.developpeurpascal.demo.*
 Merci de ne pas les diffuser sur les magasins d'application ni ailleurs en version compilée mais de systématiquement renvoyer vers ce site.
 
-Cette librairie a été créée en direct sur Twitch lors de l'opération GamingForSidaction en faveur du [Sidaction 2021](https://sidaction.org). Vous pouvez consulter le replay de la première journée sur https://www.twitch.tv/videos/964898422 et celui de la seconde journée sur https://www.twitch.tv/videos/964898422 jusqu'au 26 mai 2021, date à laquelle ils disparaîtront de Twitch.
+Cette librairie a été créée en direct sur Twitch lors de l'opération GamingForSidaction en faveur du [Sidaction 2021](https://sidaction.org). Vous pouvez consulter le replay de ce week-end sur https://serialstreameur.fr/sidaction-2021.php
 
-Si vous voulez voir le résultat de ces animations dans un vrai jeu vidéo, jetez donc un oeil à Ok ducky développé en direct sur le même week-end (et donc visible dans les 2 rediffusion Twitch ci-dessus) :
+Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez donc un oeil à Ok Ducky développé en direct lors de ce week-end de game coding en live :
 https://gamolf.itch.io/ok-ducky
+
+D'autres jeux ont été développés tout au long de l'année sur Twitch. Les rediffusions de ces sessions sont disponibles sur https://serialstreameur.fr/jeux-video.php ou la rubrique live coding du site https://serialstreameur.fr/live-coding.php
 
 -----
 
