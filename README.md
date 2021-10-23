@@ -142,6 +142,12 @@ Le son de test (WAV) est téléchargé au lancement du programme et mis en cache
 
 La musique de test (MP3) est téléchargée au lancement du programme et mis en cache depuis la page https://opengameart.org/content/battle-theme-b-for-rpg avec comme URL https://opengameart.org/sites/default/files/battleThemeB.mp3
 
+* UtilisationSpriteSheet
+
+Exemple d'utilisation et de découpage d'une spritesheet formatée en blocs.
+
+Sprite sheet utilisée comme démo provenant de https://kenney.nl/assets/pixel-platformer
+
 -----
 
 ## TODO LIST
