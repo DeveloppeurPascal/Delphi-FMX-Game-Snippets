@@ -117,7 +117,8 @@ begin
     img := tbitmap.Create;
     try
       for i := 0 to length(lstFichiers) - 1 do
-        if (not lstFichiers[i].tolower.EndsWith('-spritesheet.png')) then
+        if (tpath.GetExtension(lstFichiers[i]).tolower = '.png') and
+          (not lstFichiers[i].tolower.EndsWith('-spritesheet.png')) then
         begin
           img.LoadFromFile(lstFichiers[i]);
           if (not assigned(spritesheet)) then
