@@ -18,6 +18,7 @@ type
     FlowLayout1: TFlowLayout;
     StatusBar1: TStatusBar;
     Label1: TLabel;
+    cbSurUneLigne: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure ListBox1ItemClick(const Sender: TCustomListBox;
       const Item: TListBoxItem);
@@ -112,7 +113,12 @@ begin
     w := 0;
     h := 0;
     spritesheet := nil;
-    NbRow := trunc(sqrt(NbPNGDansDossier));
+    if cbSurUneLigne.IsChecked then
+      // Sprites les uns à côté des autres sur une seule ligne
+      NbRow := 1
+    else
+      // Sprites stockés sous forme de grille
+      NbRow := trunc(sqrt(NbPNGDansDossier));
     NbCol := ceil(NbPNGDansDossier / NbRow);
     img := tbitmap.Create;
     try
@@ -129,8 +135,11 @@ begin
             h := img.height;
             spritesheet := tbitmap.Create(w * NbCol, h * NbRow);
           end;
-          spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width - 1,
-            img.height - 1), col * w, row * h);
+          // ne pas mettre taille-1 car Bitmap a un pixel de trop à cause du BMP de Windows mal conçu !
+          // spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width - 1,
+          // img.height - 1), col * w, row * h);
+          spritesheet.CopyFromBitmap(img, Rect(0, 0, img.Width, img.height),
+            col * w, row * h);
           inc(col);
           if (col >= NbCol) then
           begin

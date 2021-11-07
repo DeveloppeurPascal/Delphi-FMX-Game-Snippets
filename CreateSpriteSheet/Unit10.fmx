@@ -31,7 +31,13 @@ object Form10: TForm10
     TabOrder = 1
     object btnCreeSpriteSheet: TButton
       Align = Top
-      Size.Width = 423.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 34.000000000000000000
+      Size.Width = 413.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -41,11 +47,11 @@ object Form10: TForm10
     object VertScrollBox1: TVertScrollBox
       Align = Client
       Size.Width = 423.000000000000000000
-      Size.Height = 414.000000000000000000
+      Size.Height = 375.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Viewport.Width = 423.000000000000000000
-      Viewport.Height = 414.000000000000000000
+      Viewport.Height = 375.000000000000000000
       object FlowLayout1: TFlowLayout
         Align = Top
         Size.Width = 423.000000000000000000
@@ -56,6 +62,20 @@ object Form10: TForm10
         JustifyLastLine = Left
         FlowDirection = LeftToRight
       end
+    end
+    object cbSurUneLigne: TCheckBox
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 413.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Nouvelle sprite sheet sur une seule ligne'
     end
   end
   object Splitter1: TSplitter
