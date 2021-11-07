@@ -148,6 +148,18 @@ Exemple d'utilisation et de découpage d'une spritesheet formatée en blocs.
 
 Sprite sheet utilisée comme démo provenant de https://kenney.nl/assets/pixel-platformer
 
+* SpriteSheetSplitter
+
+Découpe une spritesheet (largeur/hauteur identique, éventuelement avec un décalage en largeur ou en hauteur) en sprites.
+
+Téléchargez le programme compilé depuis https://gamolf.itch.io/spritesheet-creator
+
+* BitmapHorizReverse
+
+Fait une symétrie horizontale pour retourner une image et en crée une autre (utile pour récupérer des bas de zone de décor à partir des images du haut).
+
+cf sprites utilisés dans Egg Hunter (vidéos de création sur https://serialstreameur.fr/jv-egg-hunter.php, jeu à télécharger sur https://gamolf.itch.io/egg-hunter)
+
 -----
 
 ## TODO LIST
