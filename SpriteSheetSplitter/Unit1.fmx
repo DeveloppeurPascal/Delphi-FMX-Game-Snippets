@@ -1,0 +1,159 @@
+object frmSpriteSheetSplitter: TfrmSpriteSheetSplitter
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Sprite Sheet Splitter'
+  ClientHeight = 311
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object btnLoad: TButton
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Load Sprite Sheet'
+    OnClick = btnLoadClick
+  end
+  object lblLargeur: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 59.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.VertAlign = Leading
+    Text = 'Sprite width'
+    TabOrder = 5
+    object edtSpriteWidth: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 3
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      Value = 64.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object lblSpriteMarginBottom: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 209.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.VertAlign = Leading
+    Text = 'Pixels between two sprites (bottom margin)'
+    TabOrder = 4
+    object edtSpriteMarginBottom: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 3
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object lblSpriteMarginRight: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 159.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.VertAlign = Leading
+    Text = 'Pixels between two sprites (right margin)'
+    TabOrder = 3
+    object edtSpriteMarginRight: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 3
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object lblSpriteHeight: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 109.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.VertAlign = Leading
+    Text = 'Sprite height'
+    TabOrder = 2
+    object edtSpriteHeight: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 3
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      Value = 64.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object btnExportSpritesFromSpriteSheet: TButton
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 259.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Split Sprite Sheet'
+    OnClick = btnExportSpritesFromSpriteSheetClick
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.png'
+    Filter = 
+      'Image PNG|*.png|Image JPEG|*.jpeg|Image JPG|*.jpg|All images|*.j' +
+      'peg;*.jpg;*.png'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    Title = 'Choose a spritesheet to split'
+    Left = 376
+    Top = 152
+  end
+end
