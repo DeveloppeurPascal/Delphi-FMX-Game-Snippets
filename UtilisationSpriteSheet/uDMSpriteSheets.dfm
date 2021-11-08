@@ -1,7 +1,7 @@
 object DMSpriteSheets: TDMSpriteSheets
-  OldCreateOrder = True
   Height = 519
   Width = 891
+  PixelsPerInch = 96
   object SpriteSheetsList: TImageList
     Source = <
       item

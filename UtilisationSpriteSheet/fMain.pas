@@ -39,7 +39,7 @@ begin
   if Sender is TImage then
   begin
     Label1.Text := (Sender as TImage).Tag.ToString;
-    bmp := DMSpriteSheets.getImageFromSpriteSheet(TSpritesheetList.platformer,
+    bmp := DMSpriteSheets.getImageFromSpriteSheet(TSpriteSheetName.platformer,
       (Sender as TImage).Tag);
     try
       Image1.bitmap.setsize(bmp.Width, bmp.Height);
@@ -57,12 +57,12 @@ var
   ImgNum: integer;
   bmp: tbitmap;
 begin
-  SpriteSheet := DMSpriteSheets.getSpritesheet(TSpritesheetList.platformer);
+  SpriteSheet := DMSpriteSheets.getSpriteSheetRef(TSpriteSheetName.platformer);
   try
     ImgNum := 0;
     while true do
     begin
-      bmp := DMSpriteSheets.getImageFromSpriteSheet(TSpritesheetList.platformer,
+      bmp := DMSpriteSheets.getImageFromSpriteSheet(TSpriteSheetName.platformer,
         SpriteSheet, ImgNum);
       if (bmp = nil) then
         break
@@ -83,7 +83,7 @@ begin
       inc(ImgNum);
     end;
   finally
-    SpriteSheet.Free;
+    // SpriteSheet.Free; // Don't free it, it's a reference to the image in the TImageList, not a new bitmap !
   end;
 end;
 

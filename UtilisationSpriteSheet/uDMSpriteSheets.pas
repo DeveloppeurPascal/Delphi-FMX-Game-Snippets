@@ -7,19 +7,57 @@ uses
 
 type
 {$SCOPEDENUMS ON}
-  TSpritesheetList = (base, interior, dungeon, characters, city, platformer);
+  TSpriteSheetName = (base, interior, dungeon, characters, city, platformer);
 
   TDMSpriteSheets = class(TDataModule)
     SpriteSheetsList: TImageList;
   private
     { Déclarations privées }
   public
-    { Déclarations publiques }
-    function getSpriteSheet(ASpriteSheet: TSpritesheetList): TBitmap;
-    function getImageFromSpriteSheet(ASpriteSheet: TSpritesheetList;
+    /// <summary>
+    /// Retourne une image stockée dans la liste des images, chaque image correspondant à une spritesheet
+    /// ATTENTION : il n'y a pas de copie de l'image, c'est directement celle de la liste des images, ne pas supprimer la bitmap reçue !
+    /// </summary>
+    function getSpriteSheetRef(ASpriteSheetName: TSpriteSheetName): TBitmap;
+
+    /// <summary>
+    /// Extrait le bitmap d'un sprite stocké dans une spritesheet
+    /// </summary>
+    function getImageFromSpriteSheet(ASpriteSheetName: TSpriteSheetName;
       AImageIndex: integer): TBitmap; overload;
-    function getImageFromSpriteSheet(ASpriteSheet: TSpritesheetList;
+
+    /// <summary>
+    /// Extrait le bitmap d'un sprite stocké dans une spritesheet
+    /// </summary>
+    function getImageFromSpriteSheet(ASpriteSheetName: TSpriteSheetName;
       ASpriteSheetBitmap: TBitmap; AImageIndex: integer): TBitmap; overload;
+
+    /// <summary>
+    /// Extrait le bitmap d'un sprite stocké dans une spritesheet
+    /// </summary>
+    function getImageFromSpriteSheet(ASpriteSheetBitmap: TBitmap;
+      AImageIndex, ASpriteWidth, ASpriteHeight, ASpriteMArginRight,
+      ASpriteMArginBottom: integer): TBitmap; overload;
+
+    /// <summary>
+    /// Retourne le nombre d'éléments (= cases censées être des sprites) de la spritesheet spécifiée
+    /// </summary>
+    function getNbSprite(ASpriteSheetName: TSpriteSheetName): integer; overload;
+    function getNbSprite(ASpriteSheetName: TSpriteSheetName;
+      ASpriteSheetRef: TBitmap): integer; overload;
+
+    /// <summary>
+    /// Calcule le nombre de colonnes et de lignes disponibles dans la SpriteSheet spécifiée en fonction de la taille d'une sprite
+    /// </summary>
+    procedure getNbColAndNbRowFromSpriteSheet(ASpriteSheetName
+      : TSpriteSheetName; out ColCount, RowCount: integer); overload;
+
+    /// <summary>
+    /// Calcule le nombre de colonnes et de lignes disponibles dans la SpriteSheet spécifiée en fonction de la taille d'une sprite
+    /// </summary>
+    procedure getNbColAndNbRowFromSpriteSheet(ASpriteSheetName
+      : TSpriteSheetName; ASpriteSheetBitmap: TBitmap;
+      out ColCount, RowCount: integer); overload;
   end;
 
 var
@@ -31,23 +69,20 @@ implementation
 {$R *.dfm}
 
 uses
-  System.Types;
+  System.Types, System.TypInfo;
 
-function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheet: TSpritesheetList;
-  AImageIndex: integer): TBitmap;
-var
-  SpriteSheet: TBitmap;
+{ TDMSpriteSheets }
+
+function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheetName
+  : TSpriteSheetName; AImageIndex: integer): TBitmap;
 begin
-  SpriteSheet := getSpriteSheet(ASpriteSheet);
-  try
-    result := getImageFromSpriteSheet(ASpriteSheet, SpriteSheet, AImageIndex);
-  finally
-    SpriteSheet.Free;
-  end;
+  result := getImageFromSpriteSheet(ASpriteSheetName,
+    getSpriteSheetRef(ASpriteSheetName), AImageIndex);
 end;
 
-function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheet: TSpritesheetList;
-  ASpriteSheetBitmap: TBitmap; AImageIndex: integer): TBitmap;
+function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheetName
+  : TSpriteSheetName; ASpriteSheetBitmap: TBitmap;
+  AImageIndex: integer): TBitmap;
 var
   ssiWidth, ssiHeight, ssiMarginRight, ssiMarginBottom: integer;
   x, y: integer;
@@ -56,17 +91,94 @@ begin
   result := nil;
   if (ASpriteSheetBitmap <> nil) then
   begin
-    case ASpriteSheet of
-      TSpritesheetList.base, TSpritesheetList.interior,
-        TSpritesheetList.dungeon, TSpritesheetList.characters,
-        TSpritesheetList.city:
+    case ASpriteSheetName of
+      TSpriteSheetName.base, TSpriteSheetName.interior,
+        TSpriteSheetName.dungeon, TSpriteSheetName.characters,
+        TSpriteSheetName.city:
         begin
           ssiWidth := 16;
           ssiHeight := 16;
           ssiMarginRight := 1;
           ssiMarginBottom := 1;
         end;
-      TSpritesheetList.platformer:
+      TSpriteSheetName.platformer:
+        begin
+          ssiWidth := 18;
+          ssiHeight := 18;
+          ssiMarginRight := 2;
+          ssiMarginBottom := 2;
+        end;
+    else
+      ssiWidth := -1;
+      ssiHeight := -1;
+      ssiMarginRight := -1;
+      ssiMarginBottom := -1;
+    end;
+    result := getImageFromSpriteSheet(ASpriteSheetBitmap, AImageIndex, ssiWidth,
+      ssiHeight, ssiMarginRight, ssiMarginBottom);
+  end;
+end;
+
+function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheetBitmap: TBitmap;
+  AImageIndex, ASpriteWidth, ASpriteHeight, ASpriteMArginRight,
+  ASpriteMArginBottom: integer): TBitmap;
+var
+  x, y: integer;
+  ColCount, RowCount: integer;
+begin
+  result := nil;
+  if (ASpriteSheetBitmap <> nil) then
+  begin
+    if ASpriteWidth > 0 then
+    begin
+      ColCount := (ASpriteSheetBitmap.Width + ASpriteMArginRight)
+        div (ASpriteWidth + ASpriteMArginRight);
+      RowCount := (ASpriteSheetBitmap.height + ASpriteMArginBottom)
+        div (ASpriteHeight + ASpriteMArginBottom);
+    end;
+    x := (AImageIndex mod ColCount) * (ASpriteWidth + ASpriteMArginRight);
+    y := (AImageIndex div ColCount) * (ASpriteHeight + ASpriteMArginBottom);
+    if (x < ASpriteSheetBitmap.Width) and (y < ASpriteSheetBitmap.height) then
+    begin
+      result := TBitmap.Create;
+      result.SetSize(ASpriteWidth, ASpriteHeight);
+      result.CopyFromBitmap(ASpriteSheetBitmap, rect(x, y, x + ASpriteWidth,
+        y + ASpriteHeight), 0, 0);
+    end;
+  end;
+end;
+
+procedure TDMSpriteSheets.getNbColAndNbRowFromSpriteSheet(ASpriteSheetName
+  : TSpriteSheetName; out ColCount, RowCount: integer);
+begin
+  getNbColAndNbRowFromSpriteSheet(ASpriteSheetName,
+    getSpriteSheetRef(ASpriteSheetName), ColCount, RowCount);
+end;
+
+procedure TDMSpriteSheets.getNbColAndNbRowFromSpriteSheet(ASpriteSheetName
+  : TSpriteSheetName; ASpriteSheetBitmap: TBitmap;
+  out ColCount, RowCount: integer);
+var
+  ssiWidth: integer;
+  ssiHeight: integer;
+  ssiMarginRight: integer;
+  ssiMarginBottom: integer;
+begin
+  ColCount := 0;
+  RowCount := 0;
+  if (ASpriteSheetBitmap <> nil) then
+  begin
+    case ASpriteSheetName of
+      TSpriteSheetName.base, TSpriteSheetName.interior,
+        TSpriteSheetName.dungeon, TSpriteSheetName.characters,
+        TSpriteSheetName.city:
+        begin
+          ssiWidth := 16;
+          ssiHeight := 16;
+          ssiMarginRight := 1;
+          ssiMarginBottom := 1;
+        end;
+      TSpriteSheetName.platformer:
         begin
           ssiWidth := 18;
           ssiHeight := 18;
@@ -81,43 +193,43 @@ begin
     end;
     if ssiWidth > 0 then
     begin
-      ColCount := (ASpriteSheetBitmap.Width + 1)
+      ColCount := (ASpriteSheetBitmap.Width + ssiMarginRight)
         div (ssiWidth + ssiMarginRight);
-      RowCount := (ASpriteSheetBitmap.height + 1)
+      RowCount := (ASpriteSheetBitmap.height + ssiMarginBottom)
         div (ssiHeight + ssiMarginBottom);
-    end;
-    x := (AImageIndex mod ColCount) * (ssiWidth + ssiMarginRight);
-    y := (AImageIndex div ColCount) * (ssiHeight + ssiMarginBottom);
-    if (x < ASpriteSheetBitmap.Width) and (y < ASpriteSheetBitmap.height) then
-    begin
-      result := TBitmap.Create;
-      result.SetSize(ssiWidth, ssiHeight);
-      result.CopyFromBitmap(ASpriteSheetBitmap, trect.Create(x, y, x + ssiWidth,
-        y + ssiHeight), 0, 0);
     end;
   end;
 end;
 
-function TDMSpriteSheets.getSpriteSheet(ASpriteSheet: TSpritesheetList)
-  : TBitmap;
+function TDMSpriteSheets.getNbSprite(ASpriteSheetName
+  : TSpriteSheetName): integer;
+var
+  ColCount, RowCount: integer;
+begin
+  getNbColAndNbRowFromSpriteSheet(ASpriteSheetName, ColCount, RowCount);
+  result := ColCount * RowCount;
+end;
+
+function TDMSpriteSheets.getNbSprite(ASpriteSheetName: TSpriteSheetName;
+  ASpriteSheetRef: TBitmap): integer;
+var
+  ColCount, RowCount: integer;
+begin
+  getNbColAndNbRowFromSpriteSheet(ASpriteSheetName, ASpriteSheetRef, ColCount,
+    RowCount);
+  result := ColCount * RowCount;
+end;
+
+function TDMSpriteSheets.getSpriteSheetRef(ASpriteSheetName
+  : TSpriteSheetName): TBitmap;
 var
   ssName: string;
 begin
-  case ASpriteSheet of
-    TSpritesheetList.base: // https://kenney.nl/assets/roguelike-rpg-pack
-      ssName := 'base';
-    TSpritesheetList.interior: // https://kenney.nl/assets/roguelike-indoors
-      ssName := 'interior';
-    TSpritesheetList.dungeon:
-      // https://kenney.nl/assets/roguelike-caves-dungeons
-      ssName := 'dungeon';
-    TSpritesheetList.characters:
-      // https://kenney.nl/assets/roguelike-characters
-      ssName := 'characters';
-    TSpritesheetList.city: // https://kenney.nl/assets/roguelike-modern-city
-      ssName := 'city';
-    TSpritesheetList.platformer: // https://kenney.nl/assets/pixel-platformer
-      ssName := 'platformer';
+  case ASpriteSheetName of
+    TSpriteSheetName.base, TSpriteSheetName.interior, TSpriteSheetName.dungeon,
+      TSpriteSheetName.characters, TSpriteSheetName.city,
+      TSpriteSheetName.platformer:
+      ssName := GetEnumName(typeinfo(TSpriteSheetName), ord(ASpriteSheetName));
   else
     ssName := '';
   end;
@@ -125,9 +237,8 @@ begin
     result := nil
   else
   begin
-    result := TBitmap.Create;
-    result.Assign(SpriteSheetsList.Source.items
-      [SpriteSheetsList.Source.IndexOf(ssName)].MultiResBitmap.Bitmaps[1]);
+    result := SpriteSheetsList.Source.items
+      [SpriteSheetsList.Source.IndexOf(ssName)].MultiResBitmap.Bitmaps[1];
   end;
 end;
 
