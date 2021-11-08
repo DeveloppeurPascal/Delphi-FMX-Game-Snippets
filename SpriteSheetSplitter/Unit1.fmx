@@ -42,7 +42,7 @@ object frmSpriteSheetSplitter: TfrmSpriteSheetSplitter
     object edtSpriteWidth: TNumberBox
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Bottom
-      TabOrder = 3
+      TabOrder = 4
       Cursor = crIBeam
       Max = 10000.000000000000000000
       Value = 64.000000000000000000
@@ -69,7 +69,7 @@ object frmSpriteSheetSplitter: TfrmSpriteSheetSplitter
     object edtSpriteMarginBottom: TNumberBox
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Bottom
-      TabOrder = 3
+      TabOrder = 4
       Cursor = crIBeam
       Max = 10000.000000000000000000
       Position.Y = 18.000000000000000000
@@ -95,7 +95,7 @@ object frmSpriteSheetSplitter: TfrmSpriteSheetSplitter
     object edtSpriteMarginRight: TNumberBox
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Bottom
-      TabOrder = 3
+      TabOrder = 4
       Cursor = crIBeam
       Max = 10000.000000000000000000
       Position.Y = 18.000000000000000000
@@ -121,7 +121,7 @@ object frmSpriteSheetSplitter: TfrmSpriteSheetSplitter
     object edtSpriteHeight: TNumberBox
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Bottom
-      TabOrder = 3
+      TabOrder = 4
       Cursor = crIBeam
       Max = 10000.000000000000000000
       Value = 64.000000000000000000
