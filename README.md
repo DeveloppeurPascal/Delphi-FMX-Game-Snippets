@@ -23,7 +23,7 @@ Cette librairie a été créée en direct sur Twitch lors de l'opération Gaming
 Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez donc un oeil à Ok Ducky développé en direct lors de ce week-end de game coding en live :
 https://gamolf.itch.io/ok-ducky
 
-D'autres jeux ont été développés tout au long de l'année sur Twitch. Les rediffusions de ces sessions sont disponibles sur https://serialstreameur.fr/jeux-video.php ou la rubrique live coding du site https://serialstreameur.fr/live-coding.php
+D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur https://serialstreameur.fr/jeux-video.php ou la rubrique live coding du site https://serialstreameur.fr/live-coding.php
 
 -----
 
@@ -164,8 +164,7 @@ cf sprites utilisés dans Egg Hunter (vidéos de création sur https://serialstr
 
 ## TODO LIST
 
-* Faire un programme de test de l'unité uMusicLoop.pas sur toutes les plateformes, en tant que son, simple ou multiple, et en tant que boucle d'ambiance.
-* Ajouter la gestion du volume sur la musique
+* ajouter des projets de tests unitaires pour les unités réutilisables 
 
 -----
 
