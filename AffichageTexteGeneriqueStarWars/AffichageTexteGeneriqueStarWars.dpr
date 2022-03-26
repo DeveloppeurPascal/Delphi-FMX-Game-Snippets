@@ -4,8 +4,8 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Unit17 in 'Unit17.pas' {Form17},
-  u_download in '..\..\Librairies\u_download.pas',
-  uMusicLoop in '..\MusiqueDAmbiance\uMusicLoop.pas' {MusicLoop: TDataModule};
+  uMusicLoop in '..\MusiqueDAmbiance\uMusicLoop.pas' {MusicLoop: TDataModule},
+  u_download in '..\lib-externes\librairies\u_download.pas';
 
 {$R *.res}
 
