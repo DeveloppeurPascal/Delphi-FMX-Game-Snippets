@@ -129,8 +129,6 @@ Des croix blanches et noires qui tournent en alternance.
 Cet exemple utilise les composants Radiant Shapes disponibles depuis GetIt.
 https://getitnow.embarcadero.com/bonus-radiant-shapes/
 
-TODO : comprendre pourquoi un contour persiste lors de la rotation des croix puis le corriger
-
 * MusicLoopUnitTest
 
 Programme multiplateforme de test des sons et musiques joués par l'unité uMusicLoop.pas
@@ -159,12 +157,6 @@ Téléchargez le programme compilé depuis https://gamolf.itch.io/spritesheet-cr
 Fait une symétrie horizontale pour retourner une image et en crée une autre (utile pour récupérer des bas de zone de décor à partir des images du haut).
 
 cf sprites utilisés dans Egg Hunter (vidéos de création sur https://serialstreameur.fr/jv-egg-hunter.php, jeu à télécharger sur https://gamolf.itch.io/egg-hunter)
-
------
-
-## TODO LIST
-
-* ajouter des projets de tests unitaires pour les unités réutilisables 
 
 -----
 
