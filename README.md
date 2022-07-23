@@ -110,7 +110,7 @@ Animation du changement de valeur d'un score.
 
 Affichage d'un texte façon générique de Star Wars (défilement du bas vers le centre de l'écran en profondeur).
 
-Image de fond provenant de la NASA.
+Image de fond provenant de la [NASA](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets/tree/main/AffichageTexteGeneriqueStarWars/NASA/README.md).
 Son d'ambiance provenant de https://www.soundboard.com/sb/sound/918028
 (téléchargé au premier lancement du programme dans le dossier de l'exe)
 
