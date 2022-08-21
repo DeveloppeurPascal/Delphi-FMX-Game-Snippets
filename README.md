@@ -158,6 +158,10 @@ Fait une symétrie horizontale pour retourner une image et en crée une autre (u
 
 cf sprites utilisés dans Egg Hunter (vidéos de création sur https://serialstreameur.fr/jv-egg-hunter.php, jeu à télécharger sur https://gamolf.itch.io/egg-hunter)
 
+* AnimRotationImages
+
+Deux animations à ne pas conseiller aux épileptiques mais que les amateurs de [Alfred Hitchcock](https://fr.wikipedia.org/wiki/Alfred_Hitchcock) devraient apprécier.
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
