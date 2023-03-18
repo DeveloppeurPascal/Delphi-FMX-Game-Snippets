@@ -25,6 +25,10 @@ https://gamolf.itch.io/ok-ducky
 
 D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur https://serialstreameur.fr/jeux-video.php ou la rubrique live coding du site https://serialstreameur.fr/live-coding.php
 
+Les jeux vidéo correspondants sont disponibles sur [le site Gamolf](https://gamolf.fr).
+
+Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base regardez plutôt [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples).
+
 -----
 
 Les projets de ce dépôt sont :
