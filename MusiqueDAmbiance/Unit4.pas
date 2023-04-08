@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Memo.Types, FMX.ScrollBox,
-  FMX.Memo, FMX.Layouts;
+  FMX.Memo, FMX.Layouts, Gamolf.FMX.MusicLoop;
 
 type
   TForm4 = class(TForm)
@@ -22,8 +22,9 @@ type
     procedure btnChoisirFichierMP3Click(Sender: TObject);
   private
     { Déclarations privées }
+    MusicLoop: TMusicLoop;
   public
-    { Déclarations publiques }
+    constructor Create(AOwner: TComponent); override;
   end;
 
 var
@@ -33,34 +34,40 @@ implementation
 
 {$R *.fmx}
 
-uses uMusicLoop, System.ioutils;
+uses System.ioutils;
 
 procedure TForm4.btnChoisirFichierMP3Click(Sender: TObject);
 begin
   if OpenDialog1.Execute and tfile.exists(OpenDialog1.filename) and
     (tpath.GetExtension(OpenDialog1.filename).ToLower = '.mp3') then
   begin
-    musicloop.Play(OpenDialog1.filename);
+    MusicLoop.Play(OpenDialog1.filename);
     Memo1.lines.Insert(0, 'Lecture de ' + OpenDialog1.filename);
   end;
 end;
 
 procedure TForm4.btnPlayClick(Sender: TObject);
 begin
-  if not musicloop.IsPlaying then
+  if not MusicLoop.IsPlaying then
   begin
-    musicloop.Play;
+    MusicLoop.Play;
     Memo1.lines.Insert(0, 'Play');
   end;
 end;
 
 procedure TForm4.btnStopClick(Sender: TObject);
 begin
-  if musicloop.IsPlaying then
+  if MusicLoop.IsPlaying then
   begin
-    musicloop.stop;
+    MusicLoop.stop;
     Memo1.lines.Insert(0, 'Stop');
   end;
+end;
+
+constructor TForm4.Create(AOwner: TComponent);
+begin
+  inherited;
+  MusicLoop := TMusicLoop.Create(self);
 end;
 
 end.
