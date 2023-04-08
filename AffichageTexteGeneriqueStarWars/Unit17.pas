@@ -116,11 +116,8 @@ begin
 end;
 
 procedure TForm17.LanceAudio(FichierMP3: string);
-var
-  MusicDeFond: TMusicLoop;
 begin
-  MusicDeFond := TMusicLoop.Create(self);
-  MusicDeFond.Play(FichierMP3);
+  musicloop.Play(FichierMP3);
 end;
 
 end.
