@@ -31,7 +31,7 @@ implementation
 
 {$R *.fmx}
 
-uses uMusicLoop;
+uses Gamolf.FMX.MusicLoop;
 
 var
   mus1: TMusicLoop;
