@@ -22,6 +22,7 @@ type
     procedure tbMusicTracking(Sender: TObject);
     procedure tbSonTracking(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormDestroy(Sender: TObject);
   private
     { Déclarations privées }
     MusicMP3: TMusicLoop;
@@ -47,10 +48,10 @@ procedure TForm20.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   fichier: string;
 begin
-  fichier := MusicMP3.audio.FileName;
+  fichier := MusicMP3.FileName;
   if tfile.exists(fichier) then
     tfile.Delete(fichier);
-  fichier := SonWAV.audio.FileName;
+  fichier := SonWAV.FileName;
   if tfile.exists(fichier) then
     tfile.Delete(fichier);
 end;
@@ -84,9 +85,17 @@ begin
     end);
 end;
 
+procedure TForm20.FormDestroy(Sender: TObject);
+begin
+  if assigned(MusicMP3) then
+    MusicMP3.free;
+  if assigned(SonWAV) then
+    SonWAV.free;
+end;
+
 function TForm20.getMusicLoop(FileName: string): TMusicLoop;
 begin
-  result := TMusicLoop.Create(self);
+  result := TMusicLoop.Create;
   result.Load(FileName);
 end;
 
