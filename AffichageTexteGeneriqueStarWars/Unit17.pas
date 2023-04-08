@@ -37,7 +37,7 @@ implementation
 {$R *.fmx}
 
 uses
-  System.IOUtils, u_download, uMusicLoop;
+  System.IOUtils, u_download, Gamolf.FMX.MusicLoop;
 
 procedure TForm17.AnimationGeneriqueDemarrer;
 var
@@ -93,11 +93,14 @@ var
 begin
   zoneTexteGenerique2D.Visible := false;
   // https://www.soundboard.com/sb/sound/918028
+  // => https://www.soundboard.com/track/download/918028
+  //
+  // http://soundfxcenter.com/download-sound/star-wars-main-theme-song/
+  // => http://soundfxcenter.com/movies/star-wars/8d82b5_Star_Wars_Main_Theme_Song.mp3
   fichier := tpath.combine(tpath.GetTempPath, 'soundboard_sound_918028.mp3');
   if not tfile.Exists(fichier) then
     tdownload_file.download
-      ('https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Imperial+March&filename=22/227558-6ea81a03-cbc1-4d18-bdd6-9b031c6752ab.mp3',
-      fichier,
+      ('https://www.soundboard.com/track/download/918028', fichier,
       procedure
       begin
         LanceAudio(fichier);
