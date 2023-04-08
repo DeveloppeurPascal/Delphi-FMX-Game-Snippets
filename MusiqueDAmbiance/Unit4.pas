@@ -22,9 +22,7 @@ type
     procedure btnChoisirFichierMP3Click(Sender: TObject);
   private
     { Déclarations privées }
-    MusicLoop: TMusicLoop;
   public
-    constructor Create(AOwner: TComponent); override;
   end;
 
 var
@@ -62,12 +60,6 @@ begin
     MusicLoop.stop;
     Memo1.lines.Insert(0, 'Stop');
   end;
-end;
-
-constructor TForm4.Create(AOwner: TComponent);
-begin
-  inherited;
-  MusicLoop := TMusicLoop.Create(self);
 end;
 
 end.
