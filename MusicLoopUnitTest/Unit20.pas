@@ -5,8 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, uMusicLoop,
-  FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.StdCtrls, FMX.Controls.Presentation, Gamolf.FMX.MusicLoop;
 
 type
   TForm20 = class(TForm)
