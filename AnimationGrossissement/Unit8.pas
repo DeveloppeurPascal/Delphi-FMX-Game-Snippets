@@ -56,7 +56,7 @@ end;
 
 procedure TForm8.FormCreate(Sender: TObject);
 begin
-  audioCouic := TMusicLoop.Create(Self);
+  audioCouic := TMusicLoop.Current;
 {$IFDEF MSWINDOWS}
   audioCouic.Load('..\..\..\assets\TheGameCreators\SoundMatter\DuckyOuch.wav');
 {$ENDIF}
