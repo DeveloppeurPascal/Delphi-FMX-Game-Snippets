@@ -1,6 +1,3 @@
 [submodule "lib-externes/librairies"]
 	path = lib-externes/librairies
 	url = https://github.com/DeveloppeurPascal/librairies.git
-[submodule "lib-externes/FMXGameEngine"]
-	path = lib-externes/FMXGameEngine
-	url = https://github.com/DeveloppeurPascal/FMXGameEngine.git
