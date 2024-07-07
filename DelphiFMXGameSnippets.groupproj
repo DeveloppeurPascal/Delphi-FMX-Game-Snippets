@@ -51,9 +51,6 @@
         <Projects Include="CanardPivot\CanardPivot.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="CreateSpriteSheet\CreateSpriteSheet.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="DuckJoke\DuckJoke.dproj">
             <Dependencies/>
         </Projects>
@@ -67,9 +64,6 @@
             <Dependencies/>
         </Projects>
         <Projects Include="MusiqueDAmbiance\MusiqueDAmbiance.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="SpriteSheetSplitter\SpriteSheetSplitter.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj">
@@ -230,15 +224,6 @@
     <Target Name="CanardPivot:Make">
         <MSBuild Projects="CanardPivot\CanardPivot.dproj" Targets="Make"/>
     </Target>
-    <Target Name="CreateSpriteSheet">
-        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj"/>
-    </Target>
-    <Target Name="CreateSpriteSheet:Clean">
-        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="CreateSpriteSheet:Make">
-        <MSBuild Projects="CreateSpriteSheet\CreateSpriteSheet.dproj" Targets="Make"/>
-    </Target>
     <Target Name="DuckJoke">
         <MSBuild Projects="DuckJoke\DuckJoke.dproj"/>
     </Target>
@@ -284,15 +269,6 @@
     <Target Name="MusiqueDAmbiance:Make">
         <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj" Targets="Make"/>
     </Target>
-    <Target Name="SpriteSheetSplitter">
-        <MSBuild Projects="SpriteSheetSplitter\SpriteSheetSplitter.dproj"/>
-    </Target>
-    <Target Name="SpriteSheetSplitter:Clean">
-        <MSBuild Projects="SpriteSheetSplitter\SpriteSheetSplitter.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SpriteSheetSplitter:Make">
-        <MSBuild Projects="SpriteSheetSplitter\SpriteSheetSplitter.dproj" Targets="Make"/>
-    </Target>
     <Target Name="UtilisationSpriteSheet">
         <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj"/>
     </Target>
@@ -312,13 +288,13 @@
         <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVagues;AnimationVaguesEtCanards;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;CreateSpriteSheet;DuckJoke;EffetsSonores;JeuDesCercles;MusicLoopUnitTest;MusiqueDAmbiance;SpriteSheetSplitter;UtilisationSpriteSheet;AnimRotationImages"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVagues;AnimationVaguesEtCanards;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MusicLoopUnitTest;MusiqueDAmbiance;UtilisationSpriteSheet;AnimRotationImages"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;CreateSpriteSheet:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;SpriteSheetSplitter:Clean;UtilisationSpriteSheet:Clean;AnimRotationImages:Clean"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;UtilisationSpriteSheet:Clean;AnimRotationImages:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;CreateSpriteSheet:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;SpriteSheetSplitter:Make;UtilisationSpriteSheet:Make;AnimRotationImages:Make"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;UtilisationSpriteSheet:Make;AnimRotationImages:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
