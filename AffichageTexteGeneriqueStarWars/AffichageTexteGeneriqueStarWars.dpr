@@ -4,8 +4,8 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Unit17 in 'Unit17.pas' {Form17},
-  u_download in '..\lib-externes\librairies\u_download.pas',
-  Gamolf.FMX.MusicLoop in '..\lib-externes\FMXGameEngine\src\Gamolf.FMX.MusicLoop.pas' {MusicLoop: TDataModule};
+  u_download in '..\lib-externes\librairies\src\u_download.pas',
+  Gamolf.FMX.MusicLoop in '..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.MusicLoop.pas';
 
 {$R *.res}
 
