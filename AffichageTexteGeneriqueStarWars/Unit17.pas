@@ -49,7 +49,7 @@ begin
   fichier := tpath.combine(tpath.GetTempPath, 'README.md');
   if not tfile.Exists(fichier) then
     tdownload_file.download
-      ('https://raw.githubusercontent.com/DeveloppeurPascal/DelphiFMXGameSnippets/main/README.md',
+      ('https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/raw/main/README.md',
       fichier,
       procedure
       begin
