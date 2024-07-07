@@ -1,4 +1,4 @@
-# DelphiFMXGameSnippets
+# Delphi FMX Game Snippets
 
 Des exemples de ce qui se fait lorsqu'on développe des jeux vidéos : gestion de sprites, musiques de fond, effets sonores, animations ...
 
@@ -72,13 +72,7 @@ On continue avec ce pauvre canard qui va maintenant pouvoir réagir si on clique
 
 * CreateSpriteSheet
 
-Les spritesheets sont des images contenant d'autres images. Hyper pratique quand on veut diminuer les temps de téléchargement sur les jeux en ligne. Ca sert aussi depuis les premiers jeux vidéos à stocker toutes les étapes d'une animation.
-
-Dans Delphi, le framework FireMonkey propose des tas de types d'animations (au sens "modification de comportements selon une formule mathématique"). L'une de ces animations permet de modifier une image à partir d'une spritesheet et de faire ainsi des images animées.
-
-La plupart des sources/banques d'images/graphistes proposant des animations les propose déjà sous forme de spritesheet ou de séries d'images mais elles ne sont pas toujours compatibles avec le comportement du TBitmapAnimation et il est donc nécessaire de créer nos propres spritesheets à partir des images de l'animation.
-
-Téléchargez le programme compilé depuis https://gamolf.itch.io/spritesheet-creator
+Projet déplacé vers [un dépôt dédié](https://github.com/DeveloppeurPascal/Spritesheet-Creator).
 
 * AnimSpriteExplosion
 
@@ -152,9 +146,7 @@ Sprite sheet utilisée comme démo provenant de https://kenney.nl/assets/pixel-p
 
 * SpriteSheetSplitter
 
-Découpe une spritesheet (largeur/hauteur identique, éventuelement avec un décalage en largeur ou en hauteur) en sprites.
-
-Téléchargez le programme compilé depuis https://gamolf.itch.io/spritesheet-creator
+Projet déplacé vers [un dépôt dédié](https://github.com/DeveloppeurPascal/Spritesheet-Splitter).
 
 * BitmapHorizReverse
 
