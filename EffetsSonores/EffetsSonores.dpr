@@ -4,7 +4,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Unit5 in 'Unit5.pas' {Form5},
-  Gamolf.FMX.MusicLoop in '..\lib-externes\FMXGameEngine\src\Gamolf.FMX.MusicLoop.pas' {MusicLoop: TDataModule};
+  Gamolf.FMX.MusicLoop in '..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.MusicLoop.pas';
 
 {$R *.res}
 
