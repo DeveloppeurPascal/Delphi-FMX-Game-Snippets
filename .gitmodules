@@ -1,3 +1,6 @@
 [submodule "lib-externes/librairies"]
 	path = lib-externes/librairies
 	url = https://github.com/DeveloppeurPascal/librairies.git
+[submodule "lib-externes/Delphi-Game-Engine"]
+	path = lib-externes/Delphi-Game-Engine
+	url = https://github.com/DeveloppeurPascal/Delphi-Game-Engine.git
