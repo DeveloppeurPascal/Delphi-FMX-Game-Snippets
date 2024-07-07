@@ -2,11 +2,34 @@
 
 [Cette page en français.](LISEZMOI.md)
 
-**A git repository template for my Delphi (or other) projects.**
+Examples of what is done when developing video games: sprite management, background music, sound effects, animations, ...
 
-**This template is distributed under the MIT license. The AGPL license is for the projects I create from this code repository template. Use whatever license you want if you use this template.**
+Projects are developed under Delphi with its FireMonkey multiplatform framework to run our projects under Windows, macOS, iOS, Android and Linux from the same code base.
 
-This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
+Not all images and musics used in this repository are free of charge. Reuse them only if you have a license. They remain the property of their respective authors and are only present in the programs for demo purposes.
+
+Images and sounds from:
+
+* [Kenney](https://kenney.nl/) which I thank for his work and spirit of sharing. Think of doing the same as me: support him by buying licenses of his creations if you use them even if he does not require us to.
+* [The Game Creators](https://www.thegamecreators.com/), software editor for video game creation and games, also offers assets including a noise library used here.
+* GSP 500 Noises, a CD-ROM of rights-free noise published in 1995. Yeah, I know, some of you weren't born... There was also a life before the Internet.
+* [Cartoon Smart](https://vasur.fr/cartoonsmart) which offers video training in the development of video games for iOS and macOS with the possibility to download free sound and image libraries when you subscribe.
+
+Information and explanations on the projects of this repository are available on [Developeur Pascal blog](https://developer-pascal.fr/).
+
+Example projects are in the group fr.developeurpascal.demo.*
+
+Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloperPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developer Pascal](https://developer-pascal.fr/delphi-fmx-game-snippets.html).
+
+This library was created [live on Twitch](https://www.twitch.tv/patrickpremartin) during the Gaming For Sidaction operation in favor of [Sidaction 2021](https://sidaction.org). You can view this weekend's replay on https://serialstreameur.fr/sidaction-2021.php
+
+If you want to see the result of the animations in a real video game, take a look at [Ok Ducky](https://okducky.gamolf.fr/) developed live during this live game coding weekend.
+
+Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/games-video.php).
+
+If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloperPascal/Delphi-samples).
+
+This code repository contains some projects developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
 ## Using this software
 

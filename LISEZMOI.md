@@ -2,11 +2,34 @@
 
 [This page in english.](README.md)
 
-**Un modèle de dépôt git pour mes projets Delphi (ou autres).**
+Des exemples de ce qui se fait lorsqu'on développe des jeux vidéos : gestion de sprites, musiques de fond, effets sonores, animations, ...
 
-**Ce template est distribué sous licence MIT. La licence AGPL est pour les projets que je crée à partir de ce template de dépôt de code. Utilisez la licence que vous voulez si vous utilisez ce template.**
+Les projets sont développés sous Delphi avec son framework multi plateformes FireMonkey pour exécuter nos projets sous Windows, macOS, iOS, Android et Linux à partir de la même base de code.
 
-Ce dépôt de code contient un projet développé en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
+Les images et musiques utilisées dans ce dépôt ne sont pas toutes libres de droit. Ne les réutilisez que si vous en avez une licence. Ils restent la propriété de leurs auteurs respectifs et ne sont présents dans les programmes qu'à des fins de démo.
+
+Sont utilisées des images et des sons provenant de :
+
+* [Kenney](https://kenney.nl/) que je remercie pour son oeuvre et son esprit de partage. Pensez à faire comme moi : soutenez le en achetant des licences de ses créations si vous les utilisez même s'il ne nous y oblige pas.
+* [The Game Creators](https://www.thegamecreators.com/), éditeur de logiciels de création de jeux vidéos et de jeux, propose aussi des assets dont une librairie de bruitages utilisée ici.
+* GSP 500 Noises, un CD-Rom de bruitages libres de droits publié en 1995. Oui, je sais, certains d'entre vous n'étaient pas nés... Il y avait aussi une vie avant l'Internet.
+* [Cartoon Smart](https://vasur.fr/cartoonsmart) qui propose des vidéos de formation au développement de jeux vidéos pour iOS et macOS avec la possibilité de télécharger des librairies de sons et d'images libres de droit lorsqu'on est abonné.
+
+Des informations et explications sur les projets de ce dépôt sont disponibles sur [le blog Développeur Pascal](https://developpeur-pascal.fr/).
+
+Les projets d'exemple sont dans le groupe fr.developpeurpascal.demo.*
+
+Merci de ne pas les diffuser sur les magasins d'application ni ailleurs en version compilée mais de systématiquement [renvoyer vers ce dépôt de code](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) ou vers [la rubrique dédiée sur le blog Développeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
+
+Cette librairie a été créée [en direct sur Twitch](https://www.twitch.tv/patrickpremartin) lors de l'opération Gaming For Sidaction en faveur du [Sidaction 2021](https://sidaction.org). Vous pouvez consulter le replay de ce week-end sur https://serialstreameur.fr/sidaction-2021.php
+
+Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez donc un oeil à [Ok Ducky](https://okducky.gamolf.fr/) développé en direct lors de ce week-end de game coding en live.
+
+D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur [la rubrique Jeux Vidéo de Serial Streameur](https://serialstreameur.fr/jeux-video.php).
+
+Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples).
+
+Ce dépôt de code contient des projets développés en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
 ## Utiliser ce logiciel
 
