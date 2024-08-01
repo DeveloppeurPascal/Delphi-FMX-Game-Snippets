@@ -1,6 +1,6 @@
 # Delphi FMX Game Snippets
 
-[This page in english.](README.md)
+[This page in English.](README.md)
 
 Des exemples de ce qui se fait lorsqu'on développe des jeux vidéos : gestion de sprites, musiques de fond, effets sonores, animations, ...
 
