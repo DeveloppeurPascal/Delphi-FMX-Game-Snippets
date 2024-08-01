@@ -35,10 +35,9 @@ This code repository contains some projects developed in Object Pascal language 
 
 ## Talks and conferences
 
-### XXX 2024
+### Learn to code Summer Camp 2021
 
-* [talk title](talk URL) (in English)
-* [talk title](talk URL) (in French)
+* [Des resources disponibles pour apprendre et des exemples d'animations simples](https://apprendre-delphi.fr/ltcsc2021-04.php) (in French)
 
 ### Twitch
 

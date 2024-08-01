@@ -35,10 +35,9 @@ Ce dépôt de code contient des projets développés en langage Pascal Objet sou
 
 ## Présentations et conférences
 
-### XXX 2024
+### Learn to code Summer Camp 2021
 
-* [talk title](talk url) (en anglais)
-* [talk title](talk url) (en français)
+* [Des resources disponibles pour apprendre et des exemples d'animations simples](https://apprendre-delphi.fr/ltcsc2021-04.php) (in French)
 
 ### Twitch
 
