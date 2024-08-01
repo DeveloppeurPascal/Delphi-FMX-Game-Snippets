@@ -27,7 +27,9 @@ If you want to see the result of the animations in a real video game, take a loo
 
 Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/games-video.php).
 
-If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloperPascal/Delphi-samples).
+If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloperPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
+
+To code your own games in Delphi, there are numerous utilities and game engines. You'll find a few links on [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). You can also use FireMonkey natively and add just a few useful tricks with [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
 
 This code repository contains some projects developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
@@ -40,7 +42,7 @@ This code repository contains some projects developed in Object Pascal language 
 
 ### Twitch
 
-Follow my live game development coding sessions on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr) mostly in French.
+Follow my live game development coding sessions on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr/jv-toolbox-delphi.php) mostly in French.
 
 ## Using this software
 

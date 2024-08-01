@@ -27,7 +27,9 @@ Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez d
 
 D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur [la rubrique Jeux Vidéo de Serial Streameur](https://serialstreameur.fr/jeux-video.php).
 
-Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples).
+Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples). Et sinon jetez un coup d'oeil à [ces jeux vidéo au code source ouvert sur GitHub](https://github.com/topics/delphi-game).
+
+Pour coder vos propres jeux en Delphi il existe de nombreux utilitaires et moteurs de jeux vidéo. Vous trouverez quelques liens sur [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). Vous pouvez aussi utiliser FireMonkey nativement et ajouter juste quelques trucs utiles grâce à [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
 
 Ce dépôt de code contient des projets développés en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
@@ -40,7 +42,7 @@ Ce dépôt de code contient des projets développés en langage Pascal Objet sou
 
 ### Twitch
 
-Suivez les streams de développement de jeux vidéo sur [ma chaîne Twitch](https://www.twitch.tv/patrickpremartin) ou en rediffusion sur [Serial Streameur](https://serialstreameur.fr) la plupart du temps en français.
+Suivez les streams de développement de jeux vidéo sur [ma chaîne Twitch](https://www.twitch.tv/patrickpremartin) ou en rediffusion sur [Serial Streameur](https://serialstreameur.fr/jv-toolbox-delphi.php) la plupart du temps en français.
 
 ## Utiliser ce logiciel
 
