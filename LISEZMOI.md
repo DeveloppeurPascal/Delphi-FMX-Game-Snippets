@@ -27,11 +27,17 @@ Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez d
 
 D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur [la rubrique Jeux Vidéo de Serial Streameur](https://serialstreameur.fr/jeux-video.php).
 
-Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples).
+Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples). Et sinon jetez un coup d'oeil à [ces jeux vidéo au code source ouvert sur GitHub](https://github.com/topics/delphi-game).
+
+Pour coder vos propres jeux en Delphi il existe de nombreux utilitaires et moteurs de jeux vidéo. Vous trouverez quelques liens sur [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). Vous pouvez aussi utiliser FireMonkey nativement et ajouter juste quelques trucs utiles grâce à [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
 
 Ce dépôt de code contient des projets développés en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
 ## Présentations et conférences
+
+### Learn to code Summer Camp 2021
+
+* [Des resources disponibles pour apprendre et des exemples d'animations simples](https://apprendre-delphi.fr/ltcsc2021-04.php) (in French)
 
 ### Twitch
 
@@ -49,6 +55,16 @@ Ce projet utilise des dépendances sous forme de sous modules. Ils seront absent
 
 * [DeveloppeurPascal/Delphi-Game-Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) doit être installé dans le sous dossier ./lib-externes/Delphi-Game-Engine
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) doit être installé dans le sous dossier ./lib-externes/librairies
+
+## Compatibilité
+
+En tant que [MVP Embarcadero](https://www.embarcadero.com/resources/partners/mvp-directory) je bénéficie dès qu'elles sortent des dernières versions de [Delphi](https://www.embarcadero.com/products/delphi) et [C++ Builder](https://www.embarcadero.com/products/cbuilder) dans [RAD Studio](https://www.embarcadero.com/products/rad-studio). C'est donc dans ces versions que je travaille.
+
+Normalement mes librairies et composants doivent aussi fonctionner au moins sur la version en cours de [Delphi Community Edition](https://www.embarcadero.com/products/delphi/starter).
+
+Aucune garantie de compatibilité avec des versions antérieures n'est fournie même si je m'efforce de faire du code propre et ne pas trop utiliser les nouvelles façons d'écrire dedans (type inference, inline var et multilines strings).
+
+Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/issues) pour que je teste et tente de corriger ou fournir un contournement.
 
 ## Licence d'utilisation de ce dépôt de code et de son contenu
 
