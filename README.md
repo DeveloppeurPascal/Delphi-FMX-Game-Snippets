@@ -19,7 +19,7 @@ Information and explanations on the projects of this repository are available on
 
 Example projects are in the group fr.developeurpascal.demo.*
 
-Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developer Pascal](https://developer-pascal.fr/delphi-fmx-game-snippets.html).
+Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developpeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
 
 This library was created [live on Twitch](https://www.twitch.tv/patrickpremartin) during the Gaming For Sidaction operation in favor of [Sidaction 2021](https://sidaction.org). You can view this weekend's replay on https://serialstreameur.fr/sidaction-2021.php
 
@@ -27,7 +27,7 @@ If you want to see the result of the animations in a real video game, take a loo
 
 Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/games-video.php).
 
-If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloperPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
+If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloppeurPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
 
 To code your own games in Delphi, there are numerous utilities and game engines. You'll find a few links on [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). You can also use FireMonkey natively and add just a few useful tricks with [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
 
