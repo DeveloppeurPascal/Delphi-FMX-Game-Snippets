@@ -15,11 +15,11 @@ Images and sounds from:
 * GSP 500 Noises, a CD-ROM of rights-free noise published in 1995. Yeah, I know, some of you weren't born... There was also a life before the Internet.
 * [Cartoon Smart](https://vasur.fr/cartoonsmart) which offers video training in the development of video games for iOS and macOS with the possibility to download free sound and image libraries when you subscribe.
 
-Information and explanations on the projects of this repository are available on [Developeur Pascal blog](https://developer-pascal.fr/).
+Information and explanations on the projects of this repository are available on [Developeur Pascal blog](https://developpeur-pascal.fr/).
 
 Example projects are in the group fr.developeurpascal.demo.*
 
-Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloperPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developer Pascal](https://developer-pascal.fr/delphi-fmx-game-snippets.html).
+Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developer Pascal](https://developer-pascal.fr/delphi-fmx-game-snippets.html).
 
 This library was created [live on Twitch](https://www.twitch.tv/patrickpremartin) during the Gaming For Sidaction operation in favor of [Sidaction 2021](https://sidaction.org). You can view this weekend's replay on https://serialstreameur.fr/sidaction-2021.php
 
@@ -27,7 +27,7 @@ If you want to see the result of the animations in a real video game, take a loo
 
 Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/games-video.php).
 
-If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloperPascal/Delphi-samples).
+If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloppeurPascal/Delphi-samples).
 
 This code repository contains some projects developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
