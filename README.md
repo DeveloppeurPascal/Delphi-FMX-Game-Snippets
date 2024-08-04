@@ -31,6 +31,12 @@ If you are looking for examples of code to learn Delphi about something other th
 
 This code repository contains some projects developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
+## Talks and conferences
+
+### Twitch
+
+Follow my development streams of software, video games, mobile applications and websites on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr) mostly in French.
+
 ## Using this software
 
 Visit [the devlog](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html) to find out more about how it works, access videos and articles, find out about the different versions available and their features, contact user support...
