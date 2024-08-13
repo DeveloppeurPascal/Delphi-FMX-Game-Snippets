@@ -1,0 +1,23 @@
+object cadKenneyMalePersonWalk: TcadKenneyMalePersonWalk
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Locked = True
+    HitTest = False
+    MarginWrapMode = Fit
+    Size.Width = 320.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    OnResized = Image1Resized
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 144
+    Top = 104
+  end
+end

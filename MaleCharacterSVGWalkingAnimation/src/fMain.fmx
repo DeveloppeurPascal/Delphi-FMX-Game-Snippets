@@ -1,0 +1,31 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Male Character SVG Walking Animation'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  inline cadKenneyMalePersonWalk1: TcadKenneyMalePersonWalk
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 453.000000000000000000
+    Size.PlatformDefault = False
+    inherited Image1: TImage
+      Size.Width = 640.000000000000000000
+      Size.Height = 453.000000000000000000
+    end
+  end
+  object Switch1: TSwitch
+    Align = Top
+    IsChecked = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnSwitch = Switch1Switch
+  end
+end
