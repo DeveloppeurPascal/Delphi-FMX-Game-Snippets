@@ -96,6 +96,10 @@ Des croix blanches et noires qui tournent en alternance.
 Cet exemple utilise les composants Radiant Shapes disponibles depuis GetIt.
 https://getitnow.embarcadero.com/bonus-radiant-shapes/
 
+* MaleCharacterSVGWalkingAnimation
+
+Exemple d'animation basées sur les SVG d'un personnage qui marche provenant du [Toon Characters 1](https://www.kenney.nl/assets/toon-characters-1) pack de [Kenney](https://www.kenney.nl/) en utilisant la librairie Skia pour la conversion SVG vers TBitmap.
+
 * MusicLoopUnitTest
 
 Programme multiplateforme de test des sons et musiques joués par l'unité uMusicLoop.pas
