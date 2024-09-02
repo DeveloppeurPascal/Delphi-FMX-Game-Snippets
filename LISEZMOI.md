@@ -15,7 +15,7 @@ Sont utilisées des images et des sons provenant de :
 * GSP 500 Noises, un CD-Rom de bruitages libres de droits publié en 1995. Oui, je sais, certains d'entre vous n'étaient pas nés... Il y avait aussi une vie avant l'Internet.
 * [Cartoon Smart](https://vasur.fr/cartoonsmart) qui propose des vidéos de formation au développement de jeux vidéos pour iOS et macOS avec la possibilité de télécharger des librairies de sons et d'images libres de droit lorsqu'on est abonné.
 
-Des informations et explications sur les projets de ce dépôt sont disponibles sur [le blog Développeur Pascal](https://developpeur-pascal.fr/).
+Des informations et explications sur les projets de ce dépôt sont disponibles sur [le blog Développeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
 
 Les projets d'exemple sont dans le groupe fr.developpeurpascal.demo.*
 
@@ -29,7 +29,7 @@ D'autres jeux ont été développés tout au long de l'année 2021 et au delà s
 
 Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples). Et sinon jetez un coup d'oeil à [ces jeux vidéo au code source ouvert sur GitHub](https://github.com/topics/delphi-game).
 
-Pour coder vos propres jeux en Delphi il existe de nombreux utilitaires et moteurs de jeux vidéo. Vous trouverez quelques liens sur [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). Vous pouvez aussi utiliser FireMonkey nativement et ajouter juste quelques trucs utiles grâce à [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
+Pour coder vos propres jeux en Delphi il existe de nombreux utilitaires et moteurs de jeux vidéo. Vous trouverez quelques liens sur [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). Vous pouvez aussi utiliser FireMonkey nativement et ajouter juste quelques trucs utiles grâce à [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) ou passer par [ce kit de démarrage](https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit).
 
 Ce dépôt de code contient des projets développés en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 

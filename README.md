@@ -15,7 +15,7 @@ Images and sounds from:
 * GSP 500 Noises, a CD-ROM of rights-free noise published in 1995. Yeah, I know, some of you weren't born... There was also a life before the Internet.
 * [Cartoon Smart](https://vasur.fr/cartoonsmart) which offers video training in the development of video games for iOS and macOS with the possibility to download free sound and image libraries when you subscribe.
 
-Information and explanations on the projects of this repository are available on [Developeur Pascal blog](https://developpeur-pascal.fr/).
+Information and explanations on the projects of this repository are available on [Developeur Pascal blog](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
 
 Example projects are in the group fr.developeurpascal.demo.*
 
@@ -29,7 +29,7 @@ Other games were developed throughout the year 2021 and beyond on Twitch. Reruns
 
 If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloppeurPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
 
-To code your own games in Delphi, there are numerous utilities and game engines. You'll find a few links on [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). You can also use FireMonkey natively and add just a few useful tricks with [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine).
+To code your own games in Delphi, there are numerous utilities and game engines. You'll find a few links on [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). You can also use FireMonkey natively and add just a few useful tricks with [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) or use this [FireMonkey game starter kit](https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit).
 
 This code repository contains some projects developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
