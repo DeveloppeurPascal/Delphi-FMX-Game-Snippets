@@ -61,8 +61,9 @@ type
 
   TSpriteCercle = class(TFrame)
     Circle1: TCircle;
-    procedure Circle1Click(Sender: TObject);
     procedure FrameResize(Sender: TObject);
+    procedure Circle1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
   private
     FonSpriteClic: TSpriteEvent;
     FonSpriteCollision: TSpriteEvent;
@@ -172,7 +173,8 @@ begin
   result := bc <= (Rayon + Cercle.Rayon);
 end;
 
-procedure TSpriteCercle.Circle1Click(Sender: TObject);
+procedure TSpriteCercle.Circle1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   if assigned(onSpriteClic) then
     onSpriteClic(self);

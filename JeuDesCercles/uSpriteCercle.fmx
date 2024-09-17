@@ -10,6 +10,6 @@ object SpriteCercle: TSpriteCercle
     Size.Width = 309.000000000000000000
     Size.Height = 309.000000000000000000
     Size.PlatformDefault = False
-    OnClick = Circle1Click
+    OnMouseDown = Circle1MouseDown
   end
 end
