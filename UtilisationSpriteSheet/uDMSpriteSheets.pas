@@ -29,13 +29,13 @@
 /// ***************************************************************************
 ///
 /// Author(s) :
-///      Patrick PREMARTIN
+/// Patrick PREMARTIN
 ///
 /// Site :
-///      https://fmxgamesnippets.developpeur-pascal.fr
+/// https://fmxgamesnippets.developpeur-pascal.fr
 ///
 /// Project site :
-///      https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
+/// https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 ///
 /// ***************************************************************************
 /// File last update : 07/07/2024 08:50:40
@@ -130,8 +130,6 @@ function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheetName
   AImageIndex: integer): TBitmap;
 var
   ssiWidth, ssiHeight, ssiMarginRight, ssiMarginBottom: integer;
-  x, y: integer;
-  ColCount, RowCount: integer;
 begin
   result := nil;
   if (ASpriteSheetBitmap <> nil) then
@@ -169,7 +167,7 @@ function TDMSpriteSheets.getImageFromSpriteSheet(ASpriteSheetBitmap: TBitmap;
   ASpriteMArginBottom: integer): TBitmap;
 var
   x, y: integer;
-  ColCount, RowCount: integer;
+  ColCount: integer;
 begin
   result := nil;
   if (ASpriteSheetBitmap <> nil) then
@@ -178,9 +176,11 @@ begin
     begin
       ColCount := (ASpriteSheetBitmap.Width + ASpriteMArginRight)
         div (ASpriteWidth + ASpriteMArginRight);
-      RowCount := (ASpriteSheetBitmap.height + ASpriteMArginBottom)
-        div (ASpriteHeight + ASpriteMArginBottom);
-    end;
+      // RowCount := (ASpriteSheetBitmap.height + ASpriteMArginBottom)
+      // div (ASpriteHeight + ASpriteMArginBottom);
+    end
+    else
+      ColCount := 0;
     x := (AImageIndex mod ColCount) * (ASpriteWidth + ASpriteMArginRight);
     y := (AImageIndex div ColCount) * (ASpriteHeight + ASpriteMArginBottom);
     if (x < ASpriteSheetBitmap.Width) and (y < ASpriteSheetBitmap.height) then
