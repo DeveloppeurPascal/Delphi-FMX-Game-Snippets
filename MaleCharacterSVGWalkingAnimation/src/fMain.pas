@@ -66,6 +66,7 @@ type
   TfrmMain = class(TForm)
     cadKenneyMalePersonWalk1: TcadKenneyMalePersonWalk;
     Switch1: TSwitch;
+    cadKenneyMalePersonWalk2: TcadKenneyMalePersonWalk;
     procedure Switch1Switch(Sender: TObject);
     procedure FormResize(Sender: TObject);
   private

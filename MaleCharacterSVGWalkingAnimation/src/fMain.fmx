@@ -11,11 +11,10 @@ object frmMain: TfrmMain
   DesignerMasterStyle = 0
   inline cadKenneyMalePersonWalk1: TcadKenneyMalePersonWalk
     Align = Client
-    Size.Width = 640.000000000000000000
+    Size.Width = 320.000000000000000000
     Size.Height = 453.000000000000000000
     Size.PlatformDefault = False
     inherited Image1: TImage
-      Size.Width = 640.000000000000000000
       Size.Height = 453.000000000000000000
     end
   end
@@ -27,5 +26,16 @@ object frmMain: TfrmMain
     Size.PlatformDefault = False
     TabOrder = 2
     OnSwitch = Switch1Switch
+  end
+  inline cadKenneyMalePersonWalk2: TcadKenneyMalePersonWalk
+    Align = Right
+    Position.X = 320.000000000000000000
+    Position.Y = 27.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 453.000000000000000000
+    Size.PlatformDefault = False
+    inherited Image1: TImage
+      Size.Height = 453.000000000000000000
+    end
   end
 end
