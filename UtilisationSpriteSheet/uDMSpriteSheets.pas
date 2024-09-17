@@ -38,8 +38,8 @@
 /// https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 ///
 /// ***************************************************************************
-/// File last update : 07/07/2024 08:50:40
-/// Signature : 3a07376b0baffc0086aca2962110e662964eaef3
+/// File last update : 2024-09-17T10:37:16.000+02:00
+/// Signature : c0b6b942ebac853d5f9b64e48daa98ed559851c5
 /// ***************************************************************************
 /// </summary>
 
