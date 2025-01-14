@@ -3,7 +3,7 @@
 ///
 /// Delphi FMX Game Snippets
 ///
-/// Copyright 2021-2024 Patrick Prémartin under AGPL 3.0 license.
+/// Copyright 2021-2025 Patrick Prémartin under AGPL 3.0 license.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -29,17 +29,17 @@
 /// ***************************************************************************
 ///
 /// Author(s) :
-///      Patrick PREMARTIN
+/// Patrick PREMARTIN
 ///
 /// Site :
-///      https://fmxgamesnippets.developpeur-pascal.fr
+/// https://fmxgamesnippets.developpeur-pascal.fr
 ///
 /// Project site :
-///      https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
+/// https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 ///
 /// ***************************************************************************
-/// File last update : 07/07/2024 08:50:40
-/// Signature : 37bbe7eec42732b6a0308fa37355cc95960f3de7
+/// File last update : 2025-01-14T17:47:52.000+01:00
+/// Signature : d951c03220ab520a0d3376f144aac499c31b5ff3
 /// ***************************************************************************
 /// </summary>
 
@@ -70,8 +70,10 @@ type
     procedure DeLaDroiteVersLaGaucheFinish(Sender: TObject);
     procedure DeLaGaucheVersLaDroiteFinish(Sender: TObject);
     procedure ActionPendantLeDeplacement(Sender: TObject);
-    procedure ClicSurCanard(Sender: TObject);
-    procedure ClickSurBaton(Sender: TObject);
+    procedure BatonMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure CanardMouseDown(Sender: TObject;
+      Button: TMouseButton; Shift: TShiftState; X, Y: Single);
   private
     FonGetDecalageHauteurCanard: tOnGetDecalageHauteurCanard;
     FonClicSurBaton: tOnClicSurBaton;
@@ -125,6 +127,13 @@ begin
     Position.y := y;
 end;
 
+procedure TSpriteCanard.BatonMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  if assigned(onClicSurBaton) then
+    onClicSurBaton(Self);
+end;
+
 procedure TSpriteCanard.BougeLeCanard;
 begin
   CanardEnPause := false;
@@ -161,13 +170,8 @@ begin
   Canard_VersLaDroite.Visible := DeLaGaucheVersLaDroite.Enabled;
 end;
 
-procedure TSpriteCanard.ClickSurBaton(Sender: TObject);
-begin
-  if assigned(onClicSurBaton) then
-    onClicSurBaton(Self);
-end;
-
-procedure TSpriteCanard.ClicSurCanard(Sender: TObject);
+procedure TSpriteCanard.CanardMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   if assigned(onClicSurCanard) then
     onClicSurCanard(Self);
