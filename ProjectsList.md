@@ -130,3 +130,7 @@ cf sprites utilisés dans Egg Hunter (vidéos de création sur https://serialstr
 * AnimRotationImages
 
 Deux animations à ne pas conseiller aux épileptiques mais que les amateurs de [Alfred Hitchcock](https://fr.wikipedia.org/wiki/Alfred_Hitchcock) devraient apprécier.
+
+* StarField
+
+Un champ d'étoile qui bouge. Déplacement avec flèches du clavier.
