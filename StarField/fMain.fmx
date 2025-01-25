@@ -1,0 +1,39 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Star Field Demo'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  OnHide = FormHide
+  DesignerMasterStyle = 0
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 463.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Align = Bottom
+    Position.Y = 463.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Label1'
+    TabOrder = 2
+  end
+  object LoopAnim: TTimer
+    Enabled = False
+    Interval = 16
+    OnTimer = LoopAnimTimer
+    Left = 304
+    Top = 224
+  end
+end
