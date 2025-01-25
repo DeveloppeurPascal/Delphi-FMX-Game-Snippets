@@ -38,8 +38,8 @@
 /// https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 ///
 /// ***************************************************************************
-/// File last update : 2025-01-25T13:03:46.000+01:00
-/// Signature : 778570d029e67dbefe507bd8e6f10ebaef782d4b
+/// File last update : 2025-01-25T15:49:08.000+01:00
+/// Signature : 1a43d186504c14c640420ce5f0d771675beabdfd
 /// ***************************************************************************
 /// </summary>
 
@@ -112,13 +112,30 @@ procedure TfrmMain.FormKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
   if Key = vkLeft then
-    SpeedX := SpeedX - 1
+  begin
+    Key := 0;
+    SpeedX := SpeedX - 1;
+  end
   else if Key = vkRight then
-    SpeedX := SpeedX + 1
+  begin
+    Key := 0;
+    SpeedX := SpeedX + 1;
+  end
   else if Key = vkup then
-    SpeedY := SpeedY - 1
+  begin
+    Key := 0;
+    SpeedY := SpeedY - 1;
+  end
   else if Key = vkDown then
+  begin
+    Key := 0;
     SpeedY := SpeedY + 1;
+  end
+  else if (Key = vkEscape) or (Key = vkHardwareBack) then
+  begin
+    Key := 0;
+    close;
+  end;
 end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
@@ -162,10 +179,10 @@ begin
             end;
 {$IFDEF DEBUG}
             if i = 0 then
-              Label1.Text := 'Move with the arrow keys - StarX=' + StarField[i].X.ToString + ', StarY=' +
-                StarField[i].Y.ToString + ', StarZ=' + StarField[i].z.ToString +
-                ', Red=' + r.ToString + ', ScreenX=' + X.ToString + ', ScreenY='
-                + Y.ToString;
+              Label1.Text := 'Move with the arrow keys - StarX=' + StarField[i]
+                .X.ToString + ', StarY=' + StarField[i].Y.ToString + ', StarZ='
+                + StarField[i].z.ToString + ', Red=' + r.ToString + ', ScreenX='
+                + X.ToString + ', ScreenY=' + Y.ToString;
 {$ENDIF}
           end;
       finally
