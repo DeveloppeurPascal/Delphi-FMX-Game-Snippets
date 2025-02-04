@@ -72,6 +72,9 @@
         <Projects Include="AnimRotationImages\src\AnimRotationImages.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="StarField\StarFieldDemo.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -287,14 +290,23 @@
     <Target Name="AnimRotationImages:Make">
         <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Make"/>
     </Target>
+    <Target Name="StarFieldDemo">
+        <MSBuild Projects="StarField\StarFieldDemo.dproj"/>
+    </Target>
+    <Target Name="StarFieldDemo:Clean">
+        <MSBuild Projects="StarField\StarFieldDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StarFieldDemo:Make">
+        <MSBuild Projects="StarField\StarFieldDemo.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVagues;AnimationVaguesEtCanards;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MusicLoopUnitTest;MusiqueDAmbiance;UtilisationSpriteSheet;AnimRotationImages"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVagues;AnimationVaguesEtCanards;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MusicLoopUnitTest;MusiqueDAmbiance;UtilisationSpriteSheet;AnimRotationImages;StarFieldDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;UtilisationSpriteSheet:Clean;AnimRotationImages:Clean"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;UtilisationSpriteSheet:Clean;AnimRotationImages:Clean;StarFieldDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;UtilisationSpriteSheet:Make;AnimRotationImages:Make"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;UtilisationSpriteSheet:Make;AnimRotationImages:Make;StarFieldDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
