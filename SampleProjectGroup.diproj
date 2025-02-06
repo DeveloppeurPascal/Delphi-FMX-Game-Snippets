@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Version="1.0">
+  <Title>Delphi FMX Game Snippets</Title>
+  <Summary>Programs and source code examples for game developers who want to use Delphi's cross-platform features with FireMonkey.</Summary>
+  <Author>Patrick PREMARTIN</Author>
+  <Email>patrick@premartin.fr</Email>
+  <Copyright>(c) 2021-2025 PATRICK PREMARTIN</Copyright>
+  <Comment/>
+  <Language>2057</Language>
+  <Charset>1</Charset>
+  <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
+  <FooterHtml>&lt;a href="https://fmxgamesnippets.developpeur-pascal.fr/" target="_blank"&gt;Delphi FMX Game Snippets&lt;/a&gt; (c) 2021-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <CustomDefines/>
+  <ShowImplementationSection>false</ShowImplementationSection>
+  <ShowPrivateMembers>false</ShowPrivateMembers>
+  <ShowProtectedMembers>true</ShowProtectedMembers>
+  <ShowInheritedMembers>true</ShowInheritedMembers>
+  <ShowPropertyAccessors>true</ShowPropertyAccessors>
+  <FileNamePolicy>0</FileNamePolicy>
+  <CompilerVersion>27</CompilerVersion>
+  <TargetPlatform>0</TargetPlatform>
+  <Sources>
+    <Source>.\AffichageTexteGeneriqueStarWars\AffichageTexteGeneriqueStarWars.dpr</Source>
+    <Source>.\AnimationDroiteGauche\AnimationDroiteGauche.dpr</Source>
+    <Source>.\AnimationGrossissement\AnimationGrossissement.dpr</Source>
+    <Source>.\AnimationPlusieursCarandsALEcran\AnimationPlusieursCarandsALEcran.dpr</Source>
+    <Source>.\AnimationSprite\Animationsprite.dpr</Source>
+    <Source>.\AnimationVagues\AnimationVagues.dpr</Source>
+    <Source>.\AnimationVaguesEtCanards\AnimationVaguesEtCanards.dpr</Source>
+    <Source>.\AnimCroixQuiTournent\AnimCroixQuiTournent.dpr</Source>
+    <Source>.\AnimGagneDesPoints\AnimGagneDesPoints.dpr</Source>
+    <Source>.\AnimMeteoNeige\AnimMeteoNeige.dpr</Source>
+    <Source>.\AnimScore\AnimScore.dpr</Source>
+    <Source>.\AnimSpriteEauDuLac\AnimSpriteEauDuLac.dpr</Source>
+    <Source>.\AnimSpriteExplosion\AnimSpriteExplosion.dpr</Source>
+    <Source>.\AnimSpritePersonnage\AnimSpritePersonnage.dpr</Source>
+    <Source>.\BitmapHorizReverse\BitmapHorizReverse.dpr</Source>
+    <Source>.\CanardPivot\CanardPivot.dpr</Source>
+    <Source>.\DuckJoke\DuckJoke.dpr</Source>
+    <Source>.\EffetsSonores\EffetsSonores.dpr</Source>
+    <Source>.\JeuDesCercles\JeuDesCercles.dpr</Source>
+    <Source>.\MusicLoopUnitTest\MusicLoopUnitTest.dpr</Source>
+    <Source>.\MusiqueDAmbiance\MusiqueDAmbiance.dpr</Source>
+    <Source>.\UtilisationSpriteSheet\UtilisationSpriteSheet.dpr</Source>
+    <Source>.\AnimRotationImages\src\AnimRotationImages.dpr</Source>
+    <Source>.\StarField\StarFieldDemo.dpr</Source>
+  </Sources>
+  <Outputs>
+    <Output Type="HTML">
+      <Active>true</Active>
+      <OutputDirectory>.\docs</OutputDirectory>
+    </Output>
+    <Output Type="CHM">
+      <Active>true</Active>
+      <OutputFileName>.\DelphiFMXGameSnippets.chm</OutputFileName>
+    </Output>
+    <Output Type="MSHELP2">
+      <Active>false</Active>
+      <OutputFileName>build\docs\mshelp2\SampleProjectGroup.HxS</OutputFileName>
+      <Namespace>SampleProjectGroup</Namespace>
+      <TitleID>library</TitleID>
+    </Output>
+    <Output Type="HelpAndManual">
+      <Active>false</Active>
+      <OutputFileName>build\docs\hm\SampleProjectGroup.hmxp</OutputFileName>
+    </Output>
+  </Outputs>
+</Project>
