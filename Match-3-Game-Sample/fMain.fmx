@@ -1,0 +1,101 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Match-3 Game Sample'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object GameContainer: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    OnResized = GameContainerResized
+    inline cadMatch3Game1: TcadMatch3Game
+      Align = Center
+      HitTest = False
+      Size.Width = 320.000000000000000000
+      Size.Height = 240.000000000000000000
+      Size.PlatformDefault = False
+      inherited GameScene: TImage
+        Size.Width = 320.000000000000000000
+        Size.Height = 240.000000000000000000
+      end
+    end
+  end
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Bottom
+    HitTest = False
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 420.000000000000000000
+    Size.Width = 620.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    ColumnCollection = <
+      item
+        Value = 50.000000000000000000
+      end
+      item
+        Value = 50.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = lblScore
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = lblLives
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    object lblScore: TLabel
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      Size.Width = 310.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'lblScore'
+      TabOrder = 0
+    end
+    object lblLives: TLabel
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      Size.Width = 310.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'lblLives'
+      TabOrder = 1
+    end
+    object GlowEffect1: TGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = claGold
+      Opacity = 0.899999976158142100
+    end
+  end
+  object btnPlay: TButton
+    Align = Center
+    TabOrder = 1
+    Text = 'Play'
+    TextSettings.Trimming = None
+    OnClick = btnPlayClick
+  end
+end

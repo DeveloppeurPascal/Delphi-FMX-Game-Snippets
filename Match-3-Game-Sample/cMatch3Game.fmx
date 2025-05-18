@@ -1,0 +1,29 @@
+object cadMatch3Game: TcadMatch3Game
+  HitTest = False
+  Size.Width = 975.000000000000000000
+  Size.Height = 616.000000000000000000
+  Size.PlatformDefault = False
+  OnResized = FrameResized
+  object GameScene: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Locked = True
+    Size.Width = 975.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+    WrapMode = Original
+    OnMouseDown = GameSceneMouseDown
+    OnMouseMove = GameSceneMouseMove
+    OnMouseUp = GameSceneMouseUp
+    OnMouseLeave = GameSceneMouseLeave
+  end
+  object GameLoop: TTimer
+    Enabled = False
+    Interval = 16
+    OnTimer = GameLoopTimer
+    Left = 144
+    Top = 104
+  end
+end
