@@ -100,6 +100,10 @@ https://getitnow.embarcadero.com/bonus-radiant-shapes/
 
 Exemple d'animation basées sur les SVG d'un personnage qui marche provenant du [Toon Characters 1](https://www.kenney.nl/assets/toon-characters-1) pack de [Kenney](https://www.kenney.nl/) en utilisant la librairie Skia pour la conversion SVG vers TBitmap.
 
+* Match-3-Game-Sample
+
+Un exemple de jeu de type match-3 utilisant des éléments de Kenney.nl en SVG pour la partie graphique. Ce projet peut servir de base aux vôtres : les traitement sont dans une TFrame et prennent en charge les orientations ou tailles de fenêtres comme la résolution d'écran (BitmapScale). Il fonctionne sur toutes les plateformes prises en charge par FireMonkey.
+
 * MusicLoopUnitTest
 
 Programme multiplateforme de test des sons et musiques joués par l'unité uMusicLoop.pas
