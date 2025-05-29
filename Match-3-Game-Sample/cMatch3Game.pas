@@ -38,8 +38,8 @@
   https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 
   ***************************************************************************
-  File last update : 2025-05-18T19:38:30.421+02:00
-  Signature : 7a8f8b2937f4cc3c994a1adc1d391bde82dd9ef0
+  File last update : 2025-05-29T15:23:14.000+02:00
+  Signature : f150ebbbdb9395c520ade5d6801e617ab1500ea9
   ***************************************************************************
 *)
 
@@ -424,10 +424,11 @@ begin
   result := false;
   for Col := 1 to NbCol do
     for Row := 1 to NbRow do
-      // TODO : in this program, a match-3 is ok with a triangle, you need to change this condition if you want a standard project which needs at least 3 elements in a line
       if (FGrid[Col][Row] < length(FItems)) and
-        ((FGrid[Col + 1][Row] = FGrid[Col][Row]) or
-        (FGrid[Col][Row + 1] = FGrid[Col][Row])) then
+        (((FGrid[Col + 1][Row] = FGrid[Col][Row]) and
+        (FGrid[Col + 2][Row] = FGrid[Col][Row])) or
+        ((FGrid[Col][Row + 1] = FGrid[Col][Row]) and
+        (FGrid[Col][Row + 2] = FGrid[Col][Row]))) then
       begin
         Item := FGrid[Col][Row];
         Nb := NbItems(Col, Row, Item);
