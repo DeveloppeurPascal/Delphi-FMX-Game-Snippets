@@ -38,8 +38,8 @@
   https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 
   ***************************************************************************
-  File last update : 2025-05-29T15:38:22.000+02:00
-  Signature : 3e18b7631bec5aea2c9c7660ac76d32f49100f33
+  File last update : 2025-05-29T16:06:20.000+02:00
+  Signature : eca362ce2f7f1f5a84562d5804bd55343f3745a6
   ***************************************************************************
 *)
 
@@ -147,8 +147,7 @@ implementation
 {$R *.fmx}
 
 uses
-  Olf.Skia.SVGToBitmap,
-  USVGMatch3Items;
+  Olf.Skia.SVGToBitmap;
 
 { TcadMatch3Game }
 
