@@ -38,8 +38,8 @@
   https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
 
   ***************************************************************************
-  File last update : 2025-05-29T15:23:14.000+02:00
-  Signature : f150ebbbdb9395c520ade5d6801e617ab1500ea9
+  File last update : 2025-05-29T15:38:22.000+02:00
+  Signature : 3e18b7631bec5aea2c9c7660ac76d32f49100f33
   ***************************************************************************
 *)
 
@@ -88,14 +88,12 @@ type
   private
     FNbRow: integer;
     FNbCol: integer;
-    FItems: array of string;
     FBackgroundColor: TAlphaColor;
     FSelectedBackgroundColor: TAlphaColor;
     FOnMoveButNoMatch3Event: TOnMoveButNoMatch3Event;
     FOnMatch3Event: TOnMatch3Event;
     FOnMoveButNoMatch3Proc: TOnMoveButNoMatch3Proc;
     FOnMatch3Proc: TOnMatch3Proc;
-    function GetSVGItems(Index: integer): string;
     procedure SetItems(Index: integer; const Value: string);
     procedure SetNbCol(const Value: integer);
     procedure SetNbRow(const Value: integer);
@@ -114,6 +112,7 @@ type
     FPaintedBlocSize: integer;
     FIsMouseDown: boolean;
     FCheckMatch3AfterUserMove: boolean;
+    FSVGListId: integer;
     procedure Repaint(const Force: boolean = false);
     function MoveItems: boolean;
     function FillFirstLine: boolean;
@@ -121,7 +120,7 @@ type
   public
     property NbCol: integer read FNbCol write SetNbCol;
     property NbRow: integer read FNbRow write SetNbRow;
-    property SVGItems[Index: integer]: string read GetSVGItems write SetItems;
+    property SVGItems[Index: integer]: string write SetItems;
     property BackgroundColor: TAlphaColor read FBackgroundColor
       write SetBackgroundColor;
     property SelectedBackgroundColor: TAlphaColor read FSelectedBackgroundColor
@@ -164,7 +163,9 @@ begin
   FIsInitialized := false;
   FNbCol := 7;
   FNbRow := 5;
-  SetLength(FItems, 0);
+  if FSVGListId > 0 then
+    TOlfSVGBitmapList.DeleteList(FSVGListId);
+  FSVGListId := TOlfSVGBitmapList.AddAList;
   SetLength(FGrid, 0);
   FStatus := TMatch3GamePhase.None;
   FNeedARepaint := false;
@@ -184,6 +185,7 @@ begin
   FOnMoveButNoMatch3Proc := nil;
   FOnMatch3Event := nil;
   FOnMatch3Proc := nil;
+  FSVGListId := -1;
   Clear;
 end;
 
@@ -195,7 +197,7 @@ begin
   for Col := 1 to FNbCol do
     if FGrid[Col][1] = CEmptyItem then
     begin
-      FGrid[Col][1] := random(length(FItems));
+      FGrid[Col][1] := random(TOlfSVGBitmapList.Count(FSVGListId));
       result := True;
     end;
 end;
@@ -303,7 +305,7 @@ begin
   then
   begin // Clicked on an adjacent item, try to swap them
 
-    // TODO : test in the movement is allowed to have a classic behaviour
+    // TODO : test if the movement is allowed to have a classic behaviour
 
     // Move even if no match-3 is available
     SwapItem := FGrid[Col][Row];
@@ -349,7 +351,7 @@ begin
   then
   begin // Clicked on an adjacent item, try to swap them
 
-    // TODO : test in the movement is allowed to have a classic behaviour
+    // TODO : test if the movement is allowed to have a classic behaviour
 
     // Move even if no match-3 is available (manage a lives number)
     SwapItem := FGrid[Col][Row];
@@ -370,20 +372,12 @@ begin
   FIsMouseDown := false;
 end;
 
-function TcadMatch3Game.GetSVGItems(Index: integer): string;
-begin
-  if (length(FItems) < index + 1) then
-    result := FItems[index]
-  else
-    result := '';
-end;
-
 function TcadMatch3Game.HadAMatch3: boolean;
   function NbItems(const Col, Row: integer; const Item: integer): integer;
   begin
     if (FGrid[Col][Row] = Item) then
     begin
-      FGrid[Col][Row] := FGrid[Col][Row] + length(FItems);
+      FGrid[Col][Row] := FGrid[Col][Row] + TOlfSVGBitmapList.Count(FSVGListId);
       result := 1 + NbItems(Col - 1, Row, Item) + NbItems(Col + 1, Row, Item) +
         NbItems(Col, Row - 1, Item) + NbItems(Col, Row + 1, Item);
     end
@@ -392,10 +386,10 @@ function TcadMatch3Game.HadAMatch3: boolean;
   end;
   procedure ResetItems(const Col, Row: integer);
   begin
-    if (FGrid[Col][Row] <> CEmptyItem) and (FGrid[Col][Row] >= length(FItems))
-    then
+    if (FGrid[Col][Row] <> CEmptyItem) and
+      (FGrid[Col][Row] >= TOlfSVGBitmapList.Count(FSVGListId)) then
     begin
-      FGrid[Col][Row] := FGrid[Col][Row] - length(FItems);
+      FGrid[Col][Row] := FGrid[Col][Row] - TOlfSVGBitmapList.Count(FSVGListId);
       ResetItems(Col - 1, Row);
       ResetItems(Col + 1, Row);
       ResetItems(Col, Row - 1);
@@ -404,8 +398,8 @@ function TcadMatch3Game.HadAMatch3: boolean;
   end;
   procedure DestroyItems(const Col, Row: integer);
   begin
-    if (FGrid[Col][Row] <> CEmptyItem) and (FGrid[Col][Row] >= length(FItems))
-    then
+    if (FGrid[Col][Row] <> CEmptyItem) and
+      (FGrid[Col][Row] >= TOlfSVGBitmapList.Count(FSVGListId)) then
     begin
       FGrid[Col][Row] := CEmptyItem;
       // TODO : add a "destroy" animation somewhere
@@ -424,7 +418,7 @@ begin
   result := false;
   for Col := 1 to NbCol do
     for Row := 1 to NbRow do
-      if (FGrid[Col][Row] < length(FItems)) and
+      if (FGrid[Col][Row] < TOlfSVGBitmapList.Count(FSVGListId)) and
         (((FGrid[Col + 1][Row] = FGrid[Col][Row]) and
         (FGrid[Col + 2][Row] = FGrid[Col][Row])) or
         ((FGrid[Col][Row + 1] = FGrid[Col][Row]) and
@@ -459,7 +453,7 @@ begin
   if FNbRow < 5 then
     raise Exception.Create('Need at least 5 rows.');
 
-  if (length(FItems) < 5) then
+  if (TOlfSVGBitmapList.Count(FSVGListId) < 5) then
     raise Exception.Create('Need at least 5 items.');
 
   SetLength(FGrid, FNbCol + 2);
@@ -549,16 +543,14 @@ begin
                   BMPCanvas.FillRect(Dest, 1, SelectedBackgroundBrush)
                 else
                   BMPCanvas.FillRect(Dest, 1, BackgroundBrush);
-                if FGrid[Col][Row] < length(FItems) then
+                if FGrid[Col][Row] < TOlfSVGBitmapList.Count(FSVGListId) then
                 begin
-                  // TODO : use the Bitmap() method from TOlfSVGBitmapList to have a bitmap cache
-                  BMP := SVGToBitmap(FPaintedBlocSize, FPaintedBlocSize,
-                    FItems[FGrid[Col][Row]], GameScene.Bitmap.BitmapScale,
-                    3, 3, 3, 3);
+                  BMP := TOlfSVGBitmapList.Bitmap(FSVGListId, FGrid[Col][Row],
+                    FPaintedBlocSize, FPaintedBlocSize, 3, 3, 3, 3,
+                    GameScene.Bitmap.BitmapScale);
                   try
                     BMPCanvas.DrawBitmap(BMP, BMP.BoundsF, Dest, 1);
                   finally
-                    BMP.Free;
                   end;
                 end;
               end;
@@ -585,9 +577,7 @@ end;
 
 procedure TcadMatch3Game.SetItems(Index: integer; const Value: string);
 begin
-  if (length(FItems) < index + 1) then
-    SetLength(FItems, index + 1);
-  FItems[index] := Value;
+  TOlfSVGBitmapList.AddItemAt(FSVGListId, index, Value);
 end;
 
 procedure TcadMatch3Game.SetNbCol(const Value: integer);
