@@ -100,6 +100,9 @@ begin
       tthread.ForceQueue(nil,
         procedure
         begin
+          if csDestroying in CanardClique.ComponentState then
+            exit;
+
           CanardClique.RotationAngle := 0;
           if random(100) < 50 then
           begin
