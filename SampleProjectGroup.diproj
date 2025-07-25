@@ -45,6 +45,7 @@
     <Source>.\AnimRotationImages\src\AnimRotationImages.dpr</Source>
     <Source>.\StarField\StarFieldDemo.dpr</Source>
     <Source>.\Match-3-Game-Sample\Match3GameSample.dpr</Source>
+    <Source>.\MaleCharacterSVGWalkingAnimation\src\MaleCharacterSVGWalkingAnimationSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
