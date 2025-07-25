@@ -4962,6 +4962,10 @@
                                                   <param name="Local" value="cMatch3Game.TcadMatch3Game.FPaintedBlocSize.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FSVGListId">
+                                                  <param name="Local" value="cMatch3Game.TcadMatch3Game.FSVGListId.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="FSelectedCol">
                                                   <param name="Local" value="cMatch3Game.TcadMatch3Game.FSelectedCol.html">
                                                   </OBJECT>
@@ -5143,6 +5147,504 @@
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="lblScore">
                                                   <param name="Local" value="fMain.TfrmMain.lblScore.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="frmMain">
+                                  <param name="Local" value="fMain.frmMain.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+          </UL>
+      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="MaleCharacterSVGWalkingAnimationSample">
+          <param name="Local" value="MaleCharacterSVGWalkingAnimationSample.html">
+          </OBJECT>
+          <UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="Olf.Skia.SVGToBitmap">
+                  <param name="Local" value="Olf.Skia.SVGToBitmap.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TOlfSVGBitmapList">
+                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AddAList">
+                                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddAList.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AddItem">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItem(array of string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItem(array-of-string).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItem(string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItem(string).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItem(word,array of string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItem(word,array-of-string).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItem(word,string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItem(word,string).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AddItemAt">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItemAt(word,string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItemAt(word,string).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="AddItemAt(word,word,string)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.AddItemAt(word,word,string).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Bitmap">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="Bitmap(word,integer,integer,single,single,single,single,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.Bitmap(word,integer,integer,single,single,single,single,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="Bitmap(word,integer,integer,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.Bitmap(word,integer,integer,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="Bitmap(word,word,integer,integer,single,single,single,single,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.Bitmap(word,word,integer,integer,single,single,single,single,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="Bitmap(word,word,integer,integer,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.Bitmap(word,word,integer,integer,single).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BitmapWithNoCache">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="BitmapWithNoCache(word,integer,integer,single,single,single,single,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.BitmapWithNoCache(word,integer,integer,single,single,single,single,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="BitmapWithNoCache(word,integer,integer,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.BitmapWithNoCache(word,integer,integer,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="BitmapWithNoCache(word,word,integer,integer,single,single,single,single,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.BitmapWithNoCache(word,word,integer,integer,single,single,single,single,single).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="BitmapWithNoCache(word,word,integer,integer,single)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.BitmapWithNoCache(word,word,integer,integer,single).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ClearAll">
+                                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.ClearAll.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ClearCache">
+                                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.ClearCache.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Count">
+                                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.Count.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DeleteItem">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="DeleteItem(word)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.DeleteItem(word).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="DeleteItem(word,word)">
+                                                          <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.DeleteItem(word,word).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DeleteList">
+                                                  <param name="Local" value="Olf.Skia.SVGToBitmap.TOlfSVGBitmapList.DeleteList.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Routines">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="SVGToBitmap">
+                                  <param name="Local" value="Olf.Skia.SVGToBitmap.SVGToBitmap.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="USVGKenneyToonsCharaters1MalePersonWalk">
+                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TSVGKenneyToonsCharaters1MalePersonWalk">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constants">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk1">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk2">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk3">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk3.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk4">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk4.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk5">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk5.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk6">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk6.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk7">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk7.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MalePersonWalk8">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.MalePersonWalk8.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constructors">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Create">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.Create.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Properties">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Tag">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.Tag.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="TagBool">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.TagBool.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="TagFloat">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.TagFloat.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="TagObject">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.TagObject.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="TagString">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.TagString.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Count">
+                                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.Count.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="SVG">
+                                                  </OBJECT>
+                                                  <UL>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="SVG(TSVGKenneyToonsCharaters1MalePersonWalkIndex)">
+                                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.SVG(TSVGKenneyToonsCharaters1MalePersonWalkIndex).html">
+                                                          </OBJECT>
+                                                      <LI> <OBJECT type="text/sitemap">
+                                                          <param name="Name" value="SVG(Integer)">
+                                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalk.SVG(Integer).html">
+                                                          </OBJECT>
+                                                  </UL>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Enumerations">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TSVGKenneyToonsCharaters1MalePersonWalkIndex">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk1">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk1.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk2">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk2.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk3">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk3.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk4">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk4.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk5">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk5.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk6">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk6.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk7">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk7.html">
+                                          </OBJECT>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="MalePersonWalk8">
+                                          <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.TSVGKenneyToonsCharaters1MalePersonWalkIndex.MalePersonWalk8.html">
+                                          </OBJECT>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="SVGKenneyToonsCharaters1MalePersonWalk">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.SVGKenneyToonsCharaters1MalePersonWalk.html">
+                                  </OBJECT>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Constants">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk1">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk1.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk2">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk2.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk3">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk3.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk4">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk4.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk5">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk5.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk6">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk6.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk7">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk7.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="CSVGMalePersonWalk8">
+                                  <param name="Local" value="USVGKenneyToonsCharaters1MalePersonWalk.CSVGMalePersonWalk8.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="cKenneyMalePersonWalk">
+                  <param name="Local" value="cKenneyMalePersonWalk.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TcadKenneyMalePersonWalk">
+                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constructors">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Create">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Create.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Properties">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AutoReverse">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.AutoReverse.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="CoinID">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.CoinID.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Duration">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Duration.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Inverse">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Inverse.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="IsStarted">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.IsStarted.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Loop">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Loop.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AfterConstruction">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.AfterConstruction.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Image1Resized">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Image1Resized.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="RepaintCoin">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.RepaintCoin.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Start">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Start.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Stop">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Stop.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Timer1Timer">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Timer1Timer.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Image1">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Image1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Timer1">
+                                                  <param name="Local" value="cKenneyMalePersonWalk.TcadKenneyMalePersonWalk.Timer1.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="fMain">
+                  <param name="Local" value="fMain.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TfrmMain">
+                                  <param name="Local" value="fMain.TfrmMain.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormResize">
+                                                  <param name="Local" value="fMain.TfrmMain.FormResize.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Switch1Switch">
+                                                  <param name="Local" value="fMain.TfrmMain.Switch1Switch.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Switch1">
+                                                  <param name="Local" value="fMain.TfrmMain.Switch1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cadKenneyMalePersonWalk1">
+                                                  <param name="Local" value="fMain.TfrmMain.cadKenneyMalePersonWalk1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cadKenneyMalePersonWalk2">
+                                                  <param name="Local" value="fMain.TfrmMain.cadKenneyMalePersonWalk2.html">
                                                   </OBJECT>
                                           </UL>
                                   </UL>
