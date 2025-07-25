@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{4FC3C9C5-8E6D-4BFC-8D29-9A272A0BF1DA}</ProjectGuid>
     </PropertyGroup>
@@ -18,10 +18,10 @@
         <Projects Include="AnimationSprite\Animationsprite.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="AnimationVagues\AnimationVagues.dproj">
+        <Projects Include="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj">
+        <Projects Include="AnimationVagues\AnimationVagues.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="AnimCroixQuiTournent\AnimCroixQuiTournent.dproj">
@@ -31,6 +31,9 @@
             <Dependencies/>
         </Projects>
         <Projects Include="AnimMeteoNeige\AnimMeteoNeige.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnimRotationImages\src\AnimRotationImages.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="AnimScore\AnimScore.dproj">
@@ -60,19 +63,22 @@
         <Projects Include="JeuDesCercles\JeuDesCercles.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="MaleCharacterSVGWalkingAnimation\src\MaleCharacterSVGWalkingAnimationSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Match-3-Game-Sample\Match3GameSample.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="MusicLoopUnitTest\MusicLoopUnitTest.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="MusiqueDAmbiance\MusiqueDAmbiance.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="AnimRotationImages\src\AnimRotationImages.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="StarField\StarFieldDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -128,15 +134,6 @@
     <Target Name="Animationsprite:Make">
         <MSBuild Projects="AnimationSprite\Animationsprite.dproj" Targets="Make"/>
     </Target>
-    <Target Name="AnimationVagues">
-        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj"/>
-    </Target>
-    <Target Name="AnimationVagues:Clean">
-        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="AnimationVagues:Make">
-        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Make"/>
-    </Target>
     <Target Name="AnimationVaguesEtCanards">
         <MSBuild Projects="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj"/>
     </Target>
@@ -145,6 +142,15 @@
     </Target>
     <Target Name="AnimationVaguesEtCanards:Make">
         <MSBuild Projects="AnimationVaguesEtCanards\AnimationVaguesEtCanards.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnimationVagues">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj"/>
+    </Target>
+    <Target Name="AnimationVagues:Clean">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationVagues:Make">
+        <MSBuild Projects="AnimationVagues\AnimationVagues.dproj" Targets="Make"/>
     </Target>
     <Target Name="AnimCroixQuiTournent">
         <MSBuild Projects="AnimCroixQuiTournent\AnimCroixQuiTournent.dproj"/>
@@ -172,6 +178,15 @@
     </Target>
     <Target Name="AnimMeteoNeige:Make">
         <MSBuild Projects="AnimMeteoNeige\AnimMeteoNeige.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnimRotationImages">
+        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj"/>
+    </Target>
+    <Target Name="AnimRotationImages:Clean">
+        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimRotationImages:Make">
+        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Make"/>
     </Target>
     <Target Name="AnimScore">
         <MSBuild Projects="AnimScore\AnimScore.dproj"/>
@@ -254,6 +269,24 @@
     <Target Name="JeuDesCercles:Make">
         <MSBuild Projects="JeuDesCercles\JeuDesCercles.dproj" Targets="Make"/>
     </Target>
+    <Target Name="MaleCharacterSVGWalkingAnimationSample">
+        <MSBuild Projects="MaleCharacterSVGWalkingAnimation\src\MaleCharacterSVGWalkingAnimationSample.dproj"/>
+    </Target>
+    <Target Name="MaleCharacterSVGWalkingAnimationSample:Clean">
+        <MSBuild Projects="MaleCharacterSVGWalkingAnimation\src\MaleCharacterSVGWalkingAnimationSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MaleCharacterSVGWalkingAnimationSample:Make">
+        <MSBuild Projects="MaleCharacterSVGWalkingAnimation\src\MaleCharacterSVGWalkingAnimationSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Match3GameSample">
+        <MSBuild Projects="Match-3-Game-Sample\Match3GameSample.dproj"/>
+    </Target>
+    <Target Name="Match3GameSample:Clean">
+        <MSBuild Projects="Match-3-Game-Sample\Match3GameSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Match3GameSample:Make">
+        <MSBuild Projects="Match-3-Game-Sample\Match3GameSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="MusicLoopUnitTest">
         <MSBuild Projects="MusicLoopUnitTest\MusicLoopUnitTest.dproj"/>
     </Target>
@@ -272,24 +305,6 @@
     <Target Name="MusiqueDAmbiance:Make">
         <MSBuild Projects="MusiqueDAmbiance\MusiqueDAmbiance.dproj" Targets="Make"/>
     </Target>
-    <Target Name="UtilisationSpriteSheet">
-        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj"/>
-    </Target>
-    <Target Name="UtilisationSpriteSheet:Clean">
-        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="UtilisationSpriteSheet:Make">
-        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="AnimRotationImages">
-        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj"/>
-    </Target>
-    <Target Name="AnimRotationImages:Clean">
-        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="AnimRotationImages:Make">
-        <MSBuild Projects="AnimRotationImages\src\AnimRotationImages.dproj" Targets="Make"/>
-    </Target>
     <Target Name="StarFieldDemo">
         <MSBuild Projects="StarField\StarFieldDemo.dproj"/>
     </Target>
@@ -299,14 +314,23 @@
     <Target Name="StarFieldDemo:Make">
         <MSBuild Projects="StarField\StarFieldDemo.dproj" Targets="Make"/>
     </Target>
+    <Target Name="UtilisationSpriteSheet">
+        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj"/>
+    </Target>
+    <Target Name="UtilisationSpriteSheet:Clean">
+        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UtilisationSpriteSheet:Make">
+        <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVagues;AnimationVaguesEtCanards;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MusicLoopUnitTest;MusiqueDAmbiance;UtilisationSpriteSheet;AnimRotationImages;StarFieldDemo"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVaguesEtCanards;AnimationVagues;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimRotationImages;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MaleCharacterSVGWalkingAnimationSample;Match3GameSample;MusicLoopUnitTest;MusiqueDAmbiance;StarFieldDemo;UtilisationSpriteSheet"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVagues:Clean;AnimationVaguesEtCanards:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;UtilisationSpriteSheet:Clean;AnimRotationImages:Clean;StarFieldDemo:Clean"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVaguesEtCanards:Clean;AnimationVagues:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimRotationImages:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MaleCharacterSVGWalkingAnimationSample:Clean;Match3GameSample:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;StarFieldDemo:Clean;UtilisationSpriteSheet:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVagues:Make;AnimationVaguesEtCanards:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;UtilisationSpriteSheet:Make;AnimRotationImages:Make;StarFieldDemo:Make"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVaguesEtCanards:Make;AnimationVagues:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimRotationImages:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MaleCharacterSVGWalkingAnimationSample:Make;Match3GameSample:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;StarFieldDemo:Make;UtilisationSpriteSheet:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
