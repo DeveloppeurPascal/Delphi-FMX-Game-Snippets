@@ -25,7 +25,7 @@ This library was created [live on Twitch](https://www.twitch.tv/patrickpremartin
 
 If you want to see the result of the animations in a real video game, take a look at [Ok Ducky](https://okducky.gamolf.fr/) developed live during this live game coding weekend.
 
-Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/games-video.php).
+Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/jeux-video.php).
 
 If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloppeurPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
 
