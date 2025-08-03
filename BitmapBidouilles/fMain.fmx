@@ -1,0 +1,77 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object HorzScrollBox1: THorzScrollBox
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 100.000000000000000000
+    object SelectedShipEffect: TGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = claGold
+      Opacity = 0.899999976158142100
+      Enabled = False
+    end
+  end
+  object tbZoom: TTrackBar
+    Align = Left
+    CanParentFocus = True
+    Max = 200.000000000000000000
+    Min = 1.000000000000000000
+    Orientation = Vertical
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 105.000000000000000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 370.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Value = 1.000000000000000000
+    OnTracking = tbZoomTracking
+  end
+  object tbRotation: TTrackBar
+    Align = Right
+    CanParentFocus = True
+    Max = 359.000000000000000000
+    Orientation = Vertical
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 616.000000000000000000
+    Position.Y = 105.000000000000000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 370.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnTracking = tbRotationTracking
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 572.000000000000000000
+    Size.Height = 370.000000000000000000
+    Size.PlatformDefault = False
+    WrapMode = Original
+    OnResized = Image1Resized
+  end
+end
