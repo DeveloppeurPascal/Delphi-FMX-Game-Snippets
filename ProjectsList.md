@@ -14,6 +14,10 @@ Transformation de l'image précédente en "sprite" géré sous forme de TFrame i
 
 Utilisation du sprite du canard et multiplication de celui-ci à l'écran sur plusieurs niveaux.
 
+* BitmapBidouilles
+
+Programme de test pour manipuler un bitmap directement dessiné sur le canvas d'une image en jouant avec son zoom et une rotation.
+
 * MusiqueDAmbiance
 
 Création d'un librairie pour jouer des musiques en fond sonore des logiciels. Elle est réutilisable en l'état.
