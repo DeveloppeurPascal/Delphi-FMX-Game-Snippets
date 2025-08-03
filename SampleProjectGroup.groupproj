@@ -48,6 +48,9 @@
         <Projects Include="AnimSpritePersonnage\AnimSpritePersonnage.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="BitmapBidouilles\BitmapBidouillesSample.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="BitmapHorizReverse\BitmapHorizReverse.dproj">
             <Dependencies/>
         </Projects>
@@ -224,6 +227,15 @@
     <Target Name="AnimSpritePersonnage:Make">
         <MSBuild Projects="AnimSpritePersonnage\AnimSpritePersonnage.dproj" Targets="Make"/>
     </Target>
+    <Target Name="BitmapBidouillesSample">
+        <MSBuild Projects="BitmapBidouilles\BitmapBidouillesSample.dproj"/>
+    </Target>
+    <Target Name="BitmapBidouillesSample:Clean">
+        <MSBuild Projects="BitmapBidouilles\BitmapBidouillesSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BitmapBidouillesSample:Make">
+        <MSBuild Projects="BitmapBidouilles\BitmapBidouillesSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="BitmapHorizReverse">
         <MSBuild Projects="BitmapHorizReverse\BitmapHorizReverse.dproj"/>
     </Target>
@@ -324,13 +336,13 @@
         <MSBuild Projects="UtilisationSpriteSheet\UtilisationSpriteSheet.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVaguesEtCanards;AnimationVagues;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimRotationImages;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MaleCharacterSVGWalkingAnimationSample;Match3GameSample;MusicLoopUnitTest;MusiqueDAmbiance;StarFieldDemo;UtilisationSpriteSheet"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars;AnimationDroiteGauche;AnimationGrossissement;AnimationPlusieursCarandsALEcran;Animationsprite;AnimationVaguesEtCanards;AnimationVagues;AnimCroixQuiTournent;AnimGagneDesPoints;AnimMeteoNeige;AnimRotationImages;AnimScore;AnimSpriteEauDuLac;AnimSpriteExplosion;AnimSpritePersonnage;BitmapBidouillesSample;BitmapHorizReverse;CanardPivot;DuckJoke;EffetsSonores;JeuDesCercles;MaleCharacterSVGWalkingAnimationSample;Match3GameSample;MusicLoopUnitTest;MusiqueDAmbiance;StarFieldDemo;UtilisationSpriteSheet"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVaguesEtCanards:Clean;AnimationVagues:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimRotationImages:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MaleCharacterSVGWalkingAnimationSample:Clean;Match3GameSample:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;StarFieldDemo:Clean;UtilisationSpriteSheet:Clean"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Clean;AnimationDroiteGauche:Clean;AnimationGrossissement:Clean;AnimationPlusieursCarandsALEcran:Clean;Animationsprite:Clean;AnimationVaguesEtCanards:Clean;AnimationVagues:Clean;AnimCroixQuiTournent:Clean;AnimGagneDesPoints:Clean;AnimMeteoNeige:Clean;AnimRotationImages:Clean;AnimScore:Clean;AnimSpriteEauDuLac:Clean;AnimSpriteExplosion:Clean;AnimSpritePersonnage:Clean;BitmapBidouillesSample:Clean;BitmapHorizReverse:Clean;CanardPivot:Clean;DuckJoke:Clean;EffetsSonores:Clean;JeuDesCercles:Clean;MaleCharacterSVGWalkingAnimationSample:Clean;Match3GameSample:Clean;MusicLoopUnitTest:Clean;MusiqueDAmbiance:Clean;StarFieldDemo:Clean;UtilisationSpriteSheet:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVaguesEtCanards:Make;AnimationVagues:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimRotationImages:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MaleCharacterSVGWalkingAnimationSample:Make;Match3GameSample:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;StarFieldDemo:Make;UtilisationSpriteSheet:Make"/>
+        <CallTarget Targets="AffichageTexteGeneriqueStarWars:Make;AnimationDroiteGauche:Make;AnimationGrossissement:Make;AnimationPlusieursCarandsALEcran:Make;Animationsprite:Make;AnimationVaguesEtCanards:Make;AnimationVagues:Make;AnimCroixQuiTournent:Make;AnimGagneDesPoints:Make;AnimMeteoNeige:Make;AnimRotationImages:Make;AnimScore:Make;AnimSpriteEauDuLac:Make;AnimSpriteExplosion:Make;AnimSpritePersonnage:Make;BitmapBidouillesSample:Make;BitmapHorizReverse:Make;CanardPivot:Make;DuckJoke:Make;EffetsSonores:Make;JeuDesCercles:Make;MaleCharacterSVGWalkingAnimationSample:Make;Match3GameSample:Make;MusicLoopUnitTest:Make;MusiqueDAmbiance:Make;StarFieldDemo:Make;UtilisationSpriteSheet:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
