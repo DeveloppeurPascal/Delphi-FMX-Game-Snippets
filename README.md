@@ -2,6 +2,9 @@
 
 [Cette page en français.](LISEZMOI.md)
 
+> [!WARNING]
+> Following Microsoft's decision to merge GitHub into its AI division in the summer of 2025, I have decided to stop maintaining the repositories here. I will update this repository from time to time by copying the missing changes from the main repository, which is now on [Codeberg](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets).
+
 Examples of what is done when developing video games: sprite management, background music, sound effects, animations, ...
 
 Projects are developed under Delphi with its FireMonkey multiplatform framework to run our projects under Windows, macOS, iOS, Android and Linux from the same code base.
@@ -19,7 +22,7 @@ Information and explanations on the projects of this repository are available on
 
 Example projects are in the group fr.developeurpascal.demo.*
 
-Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developpeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
+Please do not publish them on application stores or elsewhere in a compiled version but systematically [return to this code repository](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets) or to [the dedicated section on the blog Developpeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
 
 This library was created [live on Twitch](https://www.twitch.tv/patrickpremartin) during the Gaming For Sidaction operation in favor of [Sidaction 2021](https://sidaction.org). You can view this weekend's replay on https://serialstreameur.fr/sidaction-2021.php
 
@@ -27,7 +30,7 @@ If you want to see the result of the animations in a real video game, take a loo
 
 Other games were developed throughout the year 2021 and beyond on Twitch. Reruns of these sessions are available on [Serial Streamer Video Games](https://serialstreameur.fr/jeux-video.php).
 
-If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://github.com/DeveloppeurPascal/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
+If you are looking for examples of code to learn Delphi about something other than video game or basic manipulations see [this repository of examples of all kinds](https://codeberg.org/PatrickPremartin/Delphi-samples).And if not, take a look at [these open-source video games on GitHub](https://github.com/topics/delphi-game).
 
 To code your own games in Delphi, there are numerous utilities and game engines. You'll find a few links on [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). You can also use FireMonkey natively and add just a few useful tricks with [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) or use this [FireMonkey game starter kit](https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit).
 
@@ -45,7 +48,7 @@ Follow my live game development coding sessions on [my Twitch channel](https://w
 
 ## Source code installation
 
-To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets).
+To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its Codeberg repository](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets).
 
 This project uses dependencies in the form of sub-modules. They will be absent from the ZIP file. You'll have to download them by hand.
 
@@ -72,7 +75,7 @@ Normally, my libraries and components should also run on at least the current ve
 
 There's no guarantee of compatibility with earlier versions, even though I try to keep my code clean and avoid using too many of the new ways of writing in it (type inference, inline var and multiline strings).
 
-If you detect any anomalies on earlier versions, please don't hesitate to [report them](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/issues) so that I can test and try to correct or provide a workaround.
+If you detect any anomalies on earlier versions, please don't hesitate to [report them](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets/issues) so that I can test and try to correct or provide a workaround.
 
 ## License to use this code repository and its contents
 
@@ -91,7 +94,7 @@ The source codes of this code repository as well as any compiled version are pro
 
 ## How to ask a new feature, report a bug or a security issue ?
 
-If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) and [open a new issue](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/issues).
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the Codeberg repository](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets) and [open a new issue](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets/issues).
 
 If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
 

@@ -2,6 +2,9 @@
 
 [This page in English.](README.md)
 
+> [!WARNING]
+> Suite à la décision de Microsoft de fondre GitHub dans sa division IA à l'été 2025, j'ai pris la décision d'arrêter la maintenance des dépôts ici. Je mettrai à jour ce dépôt de temps en temps par copie des modifications manquantes depuis le dépôt principal désormais sur [Codeberg](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets).
+
 Des exemples de ce qui se fait lorsqu'on développe des jeux vidéos : gestion de sprites, musiques de fond, effets sonores, animations, ...
 
 Les projets sont développés sous Delphi avec son framework multi plateformes FireMonkey pour exécuter nos projets sous Windows, macOS, iOS, Android et Linux à partir de la même base de code.
@@ -19,7 +22,7 @@ Des informations et explications sur les projets de ce dépôt sont disponibles 
 
 Les projets d'exemple sont dans le groupe fr.developpeurpascal.demo.*
 
-Merci de ne pas les diffuser sur les magasins d'application ni ailleurs en version compilée mais de systématiquement [renvoyer vers ce dépôt de code](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) ou vers [la rubrique dédiée sur le blog Développeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
+Merci de ne pas les diffuser sur les magasins d'application ni ailleurs en version compilée mais de systématiquement [renvoyer vers ce dépôt de code](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets) ou vers [la rubrique dédiée sur le blog Développeur Pascal](https://developpeur-pascal.fr/delphi-fmx-game-snippets.html).
 
 Cette librairie a été créée [en direct sur Twitch](https://www.twitch.tv/patrickpremartin) lors de l'opération Gaming For Sidaction en faveur du [Sidaction 2021](https://sidaction.org). Vous pouvez consulter le replay de ce week-end sur https://serialstreameur.fr/sidaction-2021.php
 
@@ -27,7 +30,7 @@ Si vous voulez voir le résultat des animations dans un vrai jeu vidéo, jetez d
 
 D'autres jeux ont été développés tout au long de l'année 2021 et au delà sur Twitch. Les rediffusions de ces sessions sont disponibles sur [la rubrique Jeux Vidéo de Serial Streameur](https://serialstreameur.fr/jeux-video.php).
 
-Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://github.com/DeveloppeurPascal/Delphi-samples). Et sinon jetez un coup d'oeil à [ces jeux vidéo au code source ouvert sur GitHub](https://github.com/topics/delphi-game).
+Si vous cherchez des exemples de code pour apprendre Delphi sur autre chose que du jeu vidéo ou des manipulations de base consultez [ce dépôt d'exemples de toutes sortes](https://codeberg.org/PatrickPremartin/Delphi-samples). Et sinon jetez un coup d'oeil à [ces jeux vidéo au code source ouvert sur GitHub](https://github.com/topics/delphi-game).
 
 Pour coder vos propres jeux en Delphi il existe de nombreux utilitaires et moteurs de jeux vidéo. Vous trouverez quelques liens sur [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal#game-dev). Vous pouvez aussi utiliser FireMonkey nativement et ajouter juste quelques trucs utiles grâce à [Delphi Game Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) ou passer par [ce kit de démarrage](https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit).
 
@@ -45,7 +48,7 @@ Suivez mes streams de développement de logiciels, jeux vidéo, applications mob
 
 ## Installation des codes sources
 
-Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets).
+Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt Codeberg](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets).
 
 Ce projet utilise des dépendances sous forme de sous modules. Ils seront absents du fichier ZIP. Vous devrez les télécharger à la main.
 
@@ -72,7 +75,7 @@ Normalement mes librairies et composants doivent aussi fonctionner au moins sur 
 
 Aucune garantie de compatibilité avec des versions antérieures n'est fournie même si je m'efforce de faire du code propre et ne pas trop utiliser les nouvelles façons d'écrire dedans (type inference, inline var et multilines strings).
 
-Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/issues) pour que je teste et tente de corriger ou fournir un contournement.
+Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets/issues) pour que je teste et tente de corriger ou fournir un contournement.
 
 ## Licence d'utilisation de ce dépôt de code et de son contenu
 
@@ -91,7 +94,7 @@ Les codes sources de ce dépôt de code comme leur éventuelle version compilée
 
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
-Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/issues).
+Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur Codeberg](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets) et [d'ouvrir un ticket](https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets/issues).
 
 Si vous avez trouvé une faille de sécurité n'en parlez pas en public avant qu'un correctif n'ait été déployé ou soit disponible. [Contactez l'auteur du dépôt en privé](https://developpeur-pascal.fr/nous-contacter.php) pour expliquer votre trouvaille.
 
