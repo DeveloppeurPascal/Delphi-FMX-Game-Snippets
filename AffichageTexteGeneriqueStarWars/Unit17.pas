@@ -2,16 +2,20 @@
   ***************************************************************************
 
   Delphi FMX Game Snippets
+  Copyright (c) 2021-2026 Patrick PREMARTIN
 
-  Copyright 2021-2025 Patrick Prémartin under AGPL 3.0 license.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-  DEALINGS IN THE SOFTWARE.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   ***************************************************************************
 
@@ -35,11 +39,11 @@
   https://fmxgamesnippets.developpeur-pascal.fr
 
   Project site :
-  https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets
+  https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets
 
   ***************************************************************************
-  File last update : 2025-02-09T11:12:38.084+01:00
-  Signature : 9912729889125952b79c8cec95ecc2342da9aef8
+  File last update : 2026-04-02T17:53:30.000+02:00
+  Signature : d1066e6f819e2f2fa9fd8d5372f91b5f7b3250d7
   ***************************************************************************
 *)
 
@@ -94,7 +98,7 @@ begin
   fichier := tpath.combine(tpath.GetTempPath, 'README.md');
   if not tfile.Exists(fichier) then
     tdownload_file.download
-      ('https://github.com/DeveloppeurPascal/Delphi-FMX-Game-Snippets/raw/main/README.md',
+      ('https://codeberg.org/DeveloppeurPascal/Delphi-FMX-Game-Snippets/raw/branch/main/README.md',
       fichier,
       procedure
       begin

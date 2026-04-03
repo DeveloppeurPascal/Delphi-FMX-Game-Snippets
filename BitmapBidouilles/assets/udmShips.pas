@@ -1,17 +1,34 @@
 ﻿(* C2PP
   ***************************************************************************
 
-  Looping Animation Demo
+  Delphi FMX Game Snippets
+  Copyright (c) 2021-2026 Patrick PREMARTIN
 
-  Copyright 2025 Patrick PREMARTIN under AGPL 3.0 license.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-  DEALINGS IN THE SOFTWARE.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+  ***************************************************************************
+
+  Examples of what is done when developing video games: sprite management,
+  background music, sound effects, animations, ...
+
+  Projects are developed under Delphi with its FireMonkey multiplatform
+  framework to run our projects under Windows, macOS, iOS, Android and Linux
+  from the same code base.
+
+  Not all images and musics used in this repository are free of charge.
+  Reuse them only if you have a license. They remain the property of their
+  respective authors and are only present in the programs for demo purposes.
 
   ***************************************************************************
 
@@ -19,13 +36,13 @@
   Patrick PREMARTIN
 
   Site :
-  https://developpeur-pascal.fr
+  https://fmxgamesnippets.developpeur-pascal.fr
 
   Project site :
-  https://github.com/DeveloppeurPascal/LoopingAnimationDemo
+  https://codeberg.org/PatrickPremartin/Delphi-FMX-Game-Snippets
 
   ***************************************************************************
-  File last update : 2025-07-20T15:57:17.952+02:00
+  File last update : 2025-10-25T20:59:46.602+02:00
   Signature : 9048c511225a3a6b3c1c039d3266a1f9eb5f6dbf
   ***************************************************************************
 *)

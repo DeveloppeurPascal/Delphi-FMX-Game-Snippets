@@ -142,3 +142,13 @@ Deux animations à ne pas conseiller aux épileptiques mais que les amateurs de 
 * StarField
 
 Un champ d'étoile qui bouge. Déplacement avec flèches du clavier.
+
+* Duck Animation
+
+Court dessin animé d'un canard promenant sur une rivière généré à partir de bitmaps dans des scènes utilisant des composants d'animation sous Delphi.
+Ce projet est disponible sur un dépôt de code séparé : https://github.com/DeveloppeurPascal/Duck-Animation-Sidaction2021
+
+* Looping Animation Demo
+
+Animation de vaisseaux promenant dans l'espace avec accélérations, météores, planètes et champ d'étoiles en fond.
+Ce projet est disponible sur un dépôt de code séparé : https://github.com/DeveloppeurPascal/LoopingAnimationDemo
